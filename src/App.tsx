@@ -1,11 +1,14 @@
 import { useState } from "react";
 import "./App.css";
-import { CardDemo } from './components/card-demo.tsx'
+import { CardDemo } from "./components/card-demo.tsx";
+import { Card } from "./components/ui/card.tsx";
 
 function App() {
   return (
     <>
-      <CardDemo/>
+      <div className="min-h-screen bg-[#161414] relative">
+        <CardDemo />
+      </div>
     </>
   );
 }
