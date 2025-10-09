@@ -11,6 +11,10 @@ function App() {
           SEE MORE
 
         </Button>
+        <Button variant="outline" >
+          CODE
+
+        </Button>
       </div>
     </>
   );
