@@ -1,13 +1,16 @@
 import { useState } from "react";
 import "./App.css";
 import { CardDemo } from "./components/card-demo.tsx";
-import { Card } from "./components/ui/card.tsx";
+import { Button } from "./components/ui/button.tsx";
 
 function App() {
   return (
     <>
-      <div className="min-h-screen bg-[#161414] relative">
-        <CardDemo />
+      <div className="min-h-screen relative flex justify-center items-center">
+        <Button variant="default" >
+          SEE MORE
+
+        </Button>
       </div>
     </>
   );
