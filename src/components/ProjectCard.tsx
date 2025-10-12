@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ children, className = '' }) => {
   return (
-    <div className={cn("bg-surface rounded-xl p-16", className)}>
+    <div className={cn("bg-surface rounded-card p-16", className)}>
       {children}
     </div>
   );
