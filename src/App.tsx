@@ -11,6 +11,7 @@ function App() {
       <div className="min-h-screen relative flex justify-center items-center">
         <ProjectCard>
           <Text variant="h1"> Full-Stack Software Engineer</Text>
+          <Text className="text-[40px] font-normal"> Full-Stack Software Engineer</Text>
           <Skill>React</Skill>
           <Button variant="default">SEE MORE</Button>
           <Button variant="outline">CODE</Button>
