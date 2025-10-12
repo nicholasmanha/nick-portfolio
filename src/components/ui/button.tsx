@@ -11,7 +11,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary font-medium text-primary-foreground hover:bg-primary/90",
         outline:
-          "border border-foreground bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "border border-foreground bg-transparent shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
       },
       size: {
         default: "h-9 px-5 py-2 rounded-xl has-[>svg]:px-3",
