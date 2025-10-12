@@ -4,7 +4,7 @@ import { cva,  } from "class-variance-authority"
 
 interface TextProps extends React.HTMLAttributes<HTMLDivElement>{
   children: React.ReactNode;
-  variant?: 'h1' | 'p';
+  variant?: 'h1' | 'p' | 'small';
   className?: string;
 }
 
@@ -15,6 +15,7 @@ const TextVariants = cva(
       variant: {
         h1: "text-[40px] font-black text-foreground",
         p: "text-[40px] font-black text-foreground",
+        small: "text-[12px] text-foreground"
       },
       
     },
