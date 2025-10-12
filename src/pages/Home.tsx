@@ -9,6 +9,7 @@ function Home() {
   return (
     <>
       <ProjectCard>
+        <Icon icon="Python" variant="ghost" size="small" />
         <Icon icon="Amazon" size="small" />
         <Icon icon="TypeScript" />
         <Text variant="h1"> Full-Stack Software Engineer</Text>

@@ -3,11 +3,13 @@ import React, { useState, useEffect } from 'react';
 interface IconProps {
   icon: string;
   size?: 'normal' | 'small';
+  variant?: 'normal' | 'ghost';
   className?: string;
 }
 
-export function Icon({ icon, size = 'normal', className = '' }: IconProps) {
+export function Icon({ icon, size = 'normal', variant = 'normal', className = '' }: IconProps) {
   const sizeClasses = size === 'small' ? 'w-[25px] h-[25px]' : 'w-[64px] h-[64px]';
+  const variantClasses = variant === 'ghost' ? 'brightness-0 invert' : '';
   const [iconPath, setIconPath] = useState<string | null>(null);
   
   useEffect(() => {
@@ -31,7 +33,7 @@ export function Icon({ icon, size = 'normal', className = '' }: IconProps) {
     <img
       src={iconPath}
       alt={`${icon} icon`}
-      className={`${sizeClasses} ${className}`}
+      className={`${sizeClasses} ${variantClasses} ${className}`}
     />
   );
 }
