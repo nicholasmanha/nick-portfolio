@@ -4,12 +4,15 @@ import { Button } from "./components/ui/button.tsx";
 import ProjectCard from "./components/ProjectCard.tsx";
 import Text from "./components/ui/Text.tsx";
 import Skill from "./components/Skill.tsx";
+import { Icon } from "./components/SkillIcon.tsx";
 
 function App() {
   return (
     <>
       <div className="min-h-screen relative flex justify-center items-center">
         <ProjectCard>
+          <Icon icon="Amazon" size="small" />
+          <Icon icon="TypeScript"/>
           <Text variant="h1"> Full-Stack Software Engineer</Text>
           <Text className="text-[40px] font-normal"> Full-Stack Software Engineer</Text>
           <Skill>React</Skill>
