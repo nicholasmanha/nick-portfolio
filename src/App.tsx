@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { Button } from "./components/ui/button.tsx";
 import ProjectCard from "./components/ProjectCard.tsx";
+import Text from "./components/ui/Text.tsx";
 
 function App() {
   return (

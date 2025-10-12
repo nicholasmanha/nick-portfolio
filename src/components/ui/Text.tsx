@@ -1,12 +1,11 @@
 import React from 'react'
 import { cn } from "@/lib/utils"
-import { cva, type VariantProps } from "class-variance-authority"
+import { cva,  } from "class-variance-authority"
 
-interface TextProps {
+interface TextProps extends React.HTMLAttributes<HTMLDivElement>{
   children: React.ReactNode;
   variant?: 'h1' | 'p';
   className?: string;
-  as?: 'h1' | 'h2' | 'h3' | 'p' | 'span';
 }
 
 const TextVariants = cva(
@@ -31,7 +30,6 @@ function Text({
   children,
   ...props
 }: TextProps) {
-  
   
   return (
     <div className={cn(TextVariants({ variant, className }))}
