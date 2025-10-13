@@ -5,6 +5,7 @@ import { cva,  } from "class-variance-authority"
 interface TextProps extends React.HTMLAttributes<HTMLDivElement>{
   children: React.ReactNode;
   variant?: 'h1' | 'p' | 'small';
+  color?: 'normal' | 'primary' | 'muted';
   className?: string;
 }
 
@@ -20,10 +21,15 @@ const TextVariants = cva(
         p: "text-[16px] font-normal text-foreground",
         small: "text-[12px] text-foreground"
       },
-      
+      color: {
+        normal: "text-foreground",
+        primary: "text-primary",
+        muted: "text-muted"
+      }
     },
     defaultVariants: {
       variant: "p",
+      color: "normal"
     },
   }
 )
@@ -31,12 +37,13 @@ const TextVariants = cva(
 function Text({
   className,
   variant,
+  color,
   children,
   ...props
 }: TextProps) {
   
   return (
-    <div className={cn(TextVariants({ variant, className }))}
+    <div className={cn(TextVariants({ variant, color, className }))}
           {...props}>
       {children}
     </div>
