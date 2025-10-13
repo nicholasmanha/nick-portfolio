@@ -12,10 +12,10 @@ function Home() {
         <Icon icon="Python" variant="ghost" size="small" />
         <Icon icon="Amazon" size="small" />
         <Icon icon="TypeScript" />
-        <Text variant="h1"> Full-Stack Software Engineer</Text>
+        <Text variant="h1"> Full-Stack <Text variant="h1" color="primary" as="span">Software</Text> Engineer</Text>
         <Text className="text-[40px] font-normal">
           {" "}
-          Full-Stack Software Engineer
+          Full-Stack Engineer
         </Text>
         <Skill>React</Skill>
         <Button variant="default">SEE MORE</Button>

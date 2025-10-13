@@ -6,6 +6,7 @@ interface TextProps extends React.HTMLAttributes<HTMLDivElement>{
   children: React.ReactNode;
   variant?: 'h1' | 'p' | 'small';
   color?: 'normal' | 'primary' | 'muted';
+  as?: 'div' | 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4';
   className?: string;
 }
 
@@ -38,15 +39,16 @@ function Text({
   className,
   variant,
   color,
+  as: Component = 'div',
   children,
   ...props
 }: TextProps) {
   
   return (
-    <div className={cn(TextVariants({ variant, color, className }))}
+    <Component className={cn(TextVariants({ variant, color, className }))}
           {...props}>
       {children}
-    </div>
+    </Component>
   );
 };
 
