@@ -3,13 +3,25 @@ import React, { useState, useEffect } from 'react';
 interface IconProps {
   icon: string;
   size?: 'normal' | 'small';
-  variant?: 'normal' | 'ghost';
+  variant?: 'normal' | 'ghost' | 'ghost-muted';
   className?: string;
 }
 
 export function Icon({ icon, size = 'normal', variant = 'normal', className = '' }: IconProps) {
   const maxSize = size === 'small' ? 25 : 64;
-  const variantClasses = variant === 'ghost' ? 'brightness-0 invert' : '';
+  
+  const getVariantClasses = () => {
+    switch (variant) {
+      case 'ghost':
+        return 'brightness-0 invert';
+      case 'ghost-muted':
+        return 'brightness-0 invert opacity-50';
+      default:
+        return '';
+    }
+  };
+  
+  const variantClasses = getVariantClasses();
   const [iconPath, setIconPath] = useState<string | null>(null);
   const [dimensions, setDimensions] = useState<{ width: number; height: number } | null>(null);
   
@@ -22,7 +34,6 @@ export function Icon({ icon, size = 'normal', variant = 'normal', className = ''
         const path = module as string;
         setIconPath(path);
         
-        // Fetch SVG to get dimensions
         fetch(path)
           .then(res => res.text())
           .then(svgText => {
