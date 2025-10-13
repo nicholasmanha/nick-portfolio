@@ -6,6 +6,7 @@ interface TextProps extends React.HTMLAttributes<HTMLDivElement>{
   children: React.ReactNode;
   variant?: 'h1' | 'p' | 'small';
   color?: 'normal' | 'primary' | 'muted';
+  emphasis?: boolean;
   as?: 'div' | 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4';
   className?: string;
 }

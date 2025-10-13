@@ -10,7 +10,7 @@ function Home() {
     <>
       <ProjectCard>
         <Icon icon="Python" variant="ghost" size="small" />
-        <Icon icon="Python" variant="ghost-muted" size="small" />
+        <Icon icon="Handshake" variant="ghost-muted" size="small" />
         <Icon icon="Amazon" size="small" />
         <Icon icon="TypeScript" />
         <Text variant="h1"> Full-Stack <Text variant="h1" color="primary" as="span">Software</Text> Engineer</Text>
