@@ -1,6 +1,6 @@
 import ProjectCard from "@/components/ProjectCard";
 import Skill from "@/components/Skill";
-import { Icon } from "@/components/SkillIcon";
+import { Icon } from "@/components/Icon";
 import { Button } from "@/components/ui/button";
 import Text from "@/components/ui/Text";
 import React from "react";
