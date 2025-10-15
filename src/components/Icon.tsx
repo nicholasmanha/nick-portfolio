@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 interface IconProps {
   icon: string;
-  size?: "normal" | "small";
+  size?: "normal" | "medium" | "small";
   variant?: "normal" | "ghost" | "ghost-muted";
   className?: string;
 }
@@ -13,7 +13,20 @@ export function Icon({
   variant = "normal",
   className = "",
 }: IconProps) {
-  const maxSize = size === "small" ? 25 : 64;
+  let maxSize;
+  switch (size) {
+    case "small":
+      maxSize = 25;
+      break;
+    case "medium":
+      maxSize = 28;
+      break;
+    case "normal":
+      maxSize = 64;
+      break;
+    default:
+      maxSize = 64;
+  }
 
   // define different styles based on variant prop
   const getVariantClasses = () => {
@@ -51,7 +64,7 @@ export function Icon({
         fetch(path)
           .then((res) => res.text())
 
-          // conversions for getting width and height 
+          // conversions for getting width and height
           .then((svgText) => {
             const parser = new DOMParser();
             const svgDoc = parser.parseFromString(svgText, "image/svg+xml");
@@ -85,7 +98,7 @@ export function Icon({
     }
   }, [icon, maxSize]);
 
-  // don't render anything until we have the icon URL and calculated dimensions 
+  // don't render anything until we have the icon URL and calculated dimensions
   if (!iconPath || !dimensions) {
     return null;
   }
