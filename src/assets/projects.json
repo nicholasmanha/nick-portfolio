@@ -1,60 +1,39 @@
 [
   {
-    "title": "Software Engineer Intern",
-    "location": "Lawrence Berkeley National Lab",
-    "date": "June 2025 - Aug 2025",
+    "title": "Assist.org Reverse Search",
+    "location": "",
+    "date": "2021 & 2025",
     "skills": [
       "TypeScript",
       "React",
       "JavaScript",
       "Python",
-      "Figma",
-      "Tailwind"
+      "Tailwind",
+      "ExpressJS"
     ],
-    "seeMore": "/reactedm",
-    "docs": "https://blueskyproject.io/finch/?path=/docs/bluesky-components-reactedm--docs",
-    "code": "https://github.com/bluesky/finch",
-    "image": "ReactEDM",
+    "seeMore": "/assist",
+    "code": "https://github.com/nicholasmanha/assist-reverse-search",
     "description": {
       "whatIMade": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis viverra. Quisque mi purus, venenatis lobortis lorem nibh. Donec in fermentum ligula. Class aptent taciti",
       "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis vive.",
-      "showDemo": true
+      "showDemo": false
     }
   },
   {
-    "title": "Full-Stack Software Engineer",
+    "title": "Banking Software",
     "location": "Terence Davis & Associates",
-    "date": "May 2024 - Aug 2024",
+    "date": "Aug 2024 - Dec 2024",
     "skills": [
-      "TypeScript",
-      "React",
-      "JavaScript",
-      "Figma",
-      "Tailwind",
-      "Amazon",
-      "Aurora"
+      "Java",
+      "WebSockets",
+      "Networking"
     ],
-    "seeMore": "/leadviver",
+    "seeMore": "/banking",
     "code": "https://example.com/code",
-    "image": "LeadViver",
+    "image": "Banking",
     "description": {
-      "whatIMade": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis viverra. Quisque mi purus, venenatis lobortis lorem nibh. Donec in fermentum ligula. Class aptent taciti",
-      "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis vive."
-    }
-  },
-  {
-    "title": "IT Intern",
-    "location": "Shasta College",
-    "date": "Aug 2023 - Dec 2023",
-    "skills": [
-      "Python",
-      "Communication",
-      "Public Speaking"
-    ],
-    "seeMore": "/it",
-    "description": {
-      "whatIDid": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non",
-      "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis vive."
+      "whatIMade": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sectetur adipiscing elit. Ut pretium velsectetur adipiscing elit. Ut",
+      "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel  sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed"
     }
   }
 ]
