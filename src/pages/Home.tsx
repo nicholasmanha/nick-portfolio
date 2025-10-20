@@ -83,9 +83,9 @@ function Home() {
             "Figma",
             "Tailwind",
           ]}
-          seeMore="https://example.com"
-          docs="https://example.com/docs"
-          code="https://example.com/code"
+          seeMore="/reactedm"
+          docs="https://blueskyproject.io/finch/?path=/docs/bluesky-components-reactedm--docs"
+          code="https://github.com/bluesky/finch"
         >
           <ProjectCard.Image>
             <img
@@ -132,9 +132,9 @@ function Home() {
             "Figma",
             "Tailwind",
             "Amazon",
-            "Aurora"
+            "Aurora",
           ]}
-          seeMore="https://example.com"
+          seeMore="/leadviver"
           code="https://example.com/code"
         >
           <ProjectCard.Image>
@@ -146,9 +146,7 @@ function Home() {
           </ProjectCard.Image>
           <ProjectCard.Description>
             <div className="mb-4">
-              <Text variant="h4">
-                What I Made{" "}
-              </Text>
+              <Text variant="h4">What I Made </Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
               pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan
               vestibulum. Sed maximus lectus sit amet quam scelerisque molestie.
@@ -157,6 +155,35 @@ function Home() {
               inceptos himenaeos. Maecenas feugiat libero eget ex mollis
               viverra. Quisque mi purus, venenatis lobortis lorem nibh. Donec in
               fermentum ligula. Class aptent taciti
+            </div>
+            <Text variant="h4">What I Learned </Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium
+            vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum.
+            Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque
+            non lorem nibh. Donec in fermentum ligula. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos. Maecenas feugiat libero eget ex mollis vive.
+          </ProjectCard.Description>
+        </ProjectCard>
+
+        <ProjectCard
+          title="IT Intern"
+          location="Shasta College"
+          date="Aug 2023 - Dec 2023"
+          skills={[
+            "Python",
+            "Communication",
+            "Public Speaking",
+          ]}
+          seeMore="/it"
+        >
+          <ProjectCard.Description>
+            <div className="mb-4">
+              <Text variant="h4">What I Did </Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan
+              vestibulum. Sed maximus lectus sit amet quam scelerisque molestie.
+              Pellentesque non
             </div>
             <Text variant="h4">What I Learned </Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium
