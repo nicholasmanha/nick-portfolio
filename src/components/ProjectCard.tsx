@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Icon } from "./Icon"; // Adjust the import path as needed
 import Text from "./ui/Text";
 import { Button } from "./ui/button";
+import Skill from "./Skill";
 
 interface ProjectCardProps {
   title: string;
@@ -60,27 +61,32 @@ const ProjectCard: React.FC<ProjectCardProps> & {
               <Text variant="p">{location}</Text>
               <Text variant="p">{date}</Text>
 
-              <div className="flex flex-wrap gap-4 my-4 items-center">
-                {skills.map((skill, index) => (
-                  <Icon key={index} icon={skill} size="small" />
-                ))}
+              <div className="flex flex-wrap gap-3 my-4 items-center">
+                {skills.map((skill, index) => {
+                  const icons = import.meta.glob("@/assets/logos/*.svg", {
+                    as: "url",
+                  });
+                  const iconExists = !!icons[`/src/assets/logos/${skill}.svg`];
+
+                  return iconExists ? (
+                    <Icon key={index} icon={skill} size="small" />
+                  ) : (
+                    <Skill key={index}>{skill}</Skill>
+                  );
+                })}
               </div>
 
               {otherChildren}
             </div>
             <div className="flex gap-4 mt-6">
-              {seeMore && (
-                <Button>
-                  SEE MORE
-                </Button>
-              )}
+              {seeMore && <Button link={seeMore}>SEE MORE</Button>}
               {docs && (
-                <Button variant="outline">
+                <Button link={docs} newTab variant="outline">
                   DOCS
                 </Button>
               )}
               {code && (
-                <Button variant="outline">
+                <Button link={code} newTab variant="outline">
                   CODE
                 </Button>
               )}
@@ -107,7 +113,11 @@ const Image: React.FC<ProjectCardImageProps> = ({
   children,
   className = "",
 }) => {
-  return <div className={cn("w-full flex justify-center", className)}>{children}</div>;
+  return (
+    <div className={cn("w-full flex justify-center", className)}>
+      {children}
+    </div>
+  );
 };
 
 ProjectCard.Description = Description;
