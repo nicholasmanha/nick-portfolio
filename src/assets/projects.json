@@ -1,0 +1,60 @@
+[
+  {
+    "title": "Software Engineer Intern",
+    "location": "Lawrence Berkeley National Lab",
+    "date": "June 2025 - Aug 2025",
+    "skills": [
+      "TypeScript",
+      "React",
+      "JavaScript",
+      "Python",
+      "Figma",
+      "Tailwind"
+    ],
+    "seeMore": "/reactedm",
+    "docs": "https://blueskyproject.io/finch/?path=/docs/bluesky-components-reactedm--docs",
+    "code": "https://github.com/bluesky/finch",
+    "image": "ReactEDM",
+    "description": {
+      "whatIMade": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis viverra. Quisque mi purus, venenatis lobortis lorem nibh. Donec in fermentum ligula. Class aptent taciti",
+      "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis vive.",
+      "showDemo": true
+    }
+  },
+  {
+    "title": "Full-Stack Software Engineer",
+    "location": "Terence Davis & Associates",
+    "date": "May 2024 - Aug 2024",
+    "skills": [
+      "TypeScript",
+      "React",
+      "JavaScript",
+      "Figma",
+      "Tailwind",
+      "Amazon",
+      "Aurora"
+    ],
+    "seeMore": "/leadviver",
+    "code": "https://example.com/code",
+    "image": "LeadViver",
+    "description": {
+      "whatIMade": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis viverra. Quisque mi purus, venenatis lobortis lorem nibh. Donec in fermentum ligula. Class aptent taciti",
+      "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis vive."
+    }
+  },
+  {
+    "title": "IT Intern",
+    "location": "Shasta College",
+    "date": "Aug 2023 - Dec 2023",
+    "skills": [
+      "Python",
+      "Communication",
+      "Public Speaking"
+    ],
+    "seeMore": "/it",
+    "description": {
+      "whatIDid": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non",
+      "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis vive."
+    }
+  }
+]

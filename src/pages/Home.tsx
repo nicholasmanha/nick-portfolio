@@ -7,6 +7,13 @@ import React from "react";
 import ScrollArrow from "@/components/ScrollArrow";
 import ReactEDM from "@/assets/ReactEDM.png";
 import LeadViver from "@/assets/leadviver.png";
+import projectsData from "@/assets/projects.json";
+
+const imageMap: Record<string, string> = {
+  ReactEDM: ReactEDM,
+  LeadViver: LeadViver,
+};
+
 
 function Home() {
   return (
@@ -71,129 +78,51 @@ function Home() {
           Experience
         </Text>
 
+        {projectsData.map((project, index) => (
         <ProjectCard
-          title="Software Engineer Intern"
-          location="Lawrence Berkeley National Lab"
-          date="June 2025 - Aug 2025"
-          skills={[
-            "TypeScript",
-            "React",
-            "JavaScript",
-            "Python",
-            "Figma",
-            "Tailwind",
-          ]}
-          seeMore="/reactedm"
-          docs="https://blueskyproject.io/finch/?path=/docs/bluesky-components-reactedm--docs"
-          code="https://github.com/bluesky/finch"
+          key={index}
+          title={project.title}
+          location={project.location}
+          date={project.date}
+          skills={project.skills}
+          seeMore={project.seeMore}
+          docs={project.docs}
+          code={project.code}
         >
-          <ProjectCard.Image>
-            <img
-              src={ReactEDM}
-              alt="Project screenshot"
-              className="rounded-lg"
-            />
-          </ProjectCard.Image>
+          {project.image && (
+            <ProjectCard.Image>
+              <img
+                src={imageMap[project.image as keyof typeof imageMap]}
+                alt={`${project.title} screenshot`}
+                className="rounded-lg"
+              />
+            </ProjectCard.Image>
+          )}
           <ProjectCard.Description>
-            <div className="mb-4">
-              <Text variant="h4">
-                What I Made{" "}
-                <Text variant="small" as="span">
-                  see demo →
+            {project.description.whatIMade && (
+              <div className="mb-4">
+                <Text variant="h4">
+                  What I Made{" "}
+                  {project.description.showDemo && (
+                    <Text variant="small" as="span">
+                      see demo →
+                    </Text>
+                  )}
                 </Text>
-              </Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-              pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan
-              vestibulum. Sed maximus lectus sit amet quam scelerisque molestie.
-              Pellentesque non lorem nibh. Donec in fermentum ligula. Class
-              aptent taciti sociosqu ad litora torquent per conubia nostra, per
-              inceptos himenaeos. Maecenas feugiat libero eget ex mollis
-              viverra. Quisque mi purus, venenatis lobortis lorem nibh. Donec in
-              fermentum ligula. Class aptent taciti
-            </div>
+                {project.description.whatIMade}
+              </div>
+            )}
+            {project.description.whatIDid && (
+              <div className="mb-4">
+                <Text variant="h4">What I Did </Text>
+                {project.description.whatIDid}
+              </div>
+            )}
             <Text variant="h4">What I Learned </Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium
-            vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum.
-            Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque
-            non lorem nibh. Donec in fermentum ligula. Class aptent taciti
-            sociosqu ad litora torquent per conubia nostra, per inceptos
-            himenaeos. Maecenas feugiat libero eget ex mollis vive.
+            {project.description.whatILearned}
           </ProjectCard.Description>
         </ProjectCard>
-
-        <ProjectCard
-          title="Full-Stack Software Engineer"
-          location="Terence Davis & Associates"
-          date="May 2024 - Aug 2024"
-          skills={[
-            "TypeScript",
-            "React",
-            "JavaScript",
-            "Figma",
-            "Tailwind",
-            "Amazon",
-            "Aurora",
-          ]}
-          seeMore="/leadviver"
-          code="https://example.com/code"
-        >
-          <ProjectCard.Image>
-            <img
-              src={LeadViver}
-              alt="Project screenshot"
-              className="rounded-lg"
-            />
-          </ProjectCard.Image>
-          <ProjectCard.Description>
-            <div className="mb-4">
-              <Text variant="h4">What I Made </Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-              pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan
-              vestibulum. Sed maximus lectus sit amet quam scelerisque molestie.
-              Pellentesque non lorem nibh. Donec in fermentum ligula. Class
-              aptent taciti sociosqu ad litora torquent per conubia nostra, per
-              inceptos himenaeos. Maecenas feugiat libero eget ex mollis
-              viverra. Quisque mi purus, venenatis lobortis lorem nibh. Donec in
-              fermentum ligula. Class aptent taciti
-            </div>
-            <Text variant="h4">What I Learned </Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium
-            vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum.
-            Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque
-            non lorem nibh. Donec in fermentum ligula. Class aptent taciti
-            sociosqu ad litora torquent per conubia nostra, per inceptos
-            himenaeos. Maecenas feugiat libero eget ex mollis vive.
-          </ProjectCard.Description>
-        </ProjectCard>
-
-        <ProjectCard
-          title="IT Intern"
-          location="Shasta College"
-          date="Aug 2023 - Dec 2023"
-          skills={[
-            "Python",
-            "Communication",
-            "Public Speaking",
-          ]}
-          seeMore="/it"
-        >
-          <ProjectCard.Description>
-            <div className="mb-4">
-              <Text variant="h4">What I Did </Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-              pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan
-              vestibulum. Sed maximus lectus sit amet quam scelerisque molestie.
-              Pellentesque non
-            </div>
-            <Text variant="h4">What I Learned </Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium
-            vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum.
-            Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque
-            non lorem nibh. Donec in fermentum ligula. Class aptent taciti
-            sociosqu ad litora torquent per conubia nostra, per inceptos
-            himenaeos. Maecenas feugiat libero eget ex mollis vive.
-          </ProjectCard.Description>
-        </ProjectCard>
+      ))}
       </div>
     </>
   );
