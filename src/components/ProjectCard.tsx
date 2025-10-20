@@ -75,12 +75,12 @@ const ProjectCard: React.FC<ProjectCardProps> & {
                 </Button>
               )}
               {docs && (
-                <Button>
+                <Button variant="outline">
                   DOCS
                 </Button>
               )}
               {code && (
-                <Button>
+                <Button variant="outline">
                   CODE
                 </Button>
               )}
