@@ -49,10 +49,13 @@ function Home() {
         </div>
         <div className="flex w-1/2 mx-auto px-16 gap-16 items-center">
           <div className="h-px bg-foreground w-full"></div>
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center gap-6">
             <Text className="whitespace-nowrap">CONNECT WITH ME</Text>
-            <div className="flex gap-4">
+            <div className="flex gap-6 justify-center">
               <Icon variant="ghost" size="medium" icon="GitHub"/>
+              <Icon variant="ghost" size="medium" icon="Linkedin"/>
+              <Icon variant="ghost" size="medium" icon="StackOverflow"/>
+              <Icon variant="ghost" size="medium" icon="Handshake"/>
             </div>
           </div>
           <div className="h-px bg-foreground w-full"></div>
