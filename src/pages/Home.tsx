@@ -4,6 +4,7 @@ import { Icon } from "@/components/Icon";
 import { Button } from "@/components/ui/button";
 import Text from "@/components/ui/Text";
 import React from "react";
+import ScrollArrow from "@/components/ScrollArrow";
 
 function Home() {
   return (
@@ -52,15 +53,15 @@ function Home() {
           <div className="flex flex-col items-center gap-6">
             <Text className="whitespace-nowrap">CONNECT WITH ME</Text>
             <div className="flex gap-6 justify-center">
-              <Icon variant="ghost" size="medium" icon="GitHub"/>
-              <Icon variant="ghost" size="medium" icon="Linkedin"/>
-              <Icon variant="ghost" size="medium" icon="StackOverflow"/>
-              <Icon variant="ghost" size="medium" icon="Handshake"/>
+              <Icon variant="ghost" size="medium" icon="GitHub" />
+              <Icon variant="ghost" size="medium" icon="Linkedin" />
+              <Icon variant="ghost" size="medium" icon="StackOverflow" />
+              <Icon variant="ghost" size="medium" icon="Handshake" />
             </div>
           </div>
           <div className="h-px bg-foreground w-full"></div>
-          </div>
-        
+        </div>
+        <ScrollArrow/>
       </div>
       <div className="max-w-screen-xl mx-auto">
         <ProjectCard>
