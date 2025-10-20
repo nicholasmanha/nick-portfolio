@@ -4,7 +4,7 @@ import { cva } from "class-variance-authority";
 
 interface TextProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
-  variant?: "h1" | "h2" | "p" | "small";
+  variant?: "h1" | "h2" | "h3" | "h4" | "p" | "small";
   color?: "normal" | "primary" | "muted";
   emphasis?: boolean;
   as?: "div" | "span" | "p" | "h1" | "h2" | "h3" | "h4";
