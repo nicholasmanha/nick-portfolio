@@ -10,10 +10,10 @@ function Home() {
   return (
     <>
       <div className="h-screen">
-        <div className="bg-surface mx-auto w-9/10 rounded-lg mb-8 border border-border overflow-hidden">
+        <div className="bg-surface mx-auto w-9/10 rounded-lg mb-16 border border-border overflow-hidden">
           <div className="max-w-screen-xl mx-auto pt-16 py-12 flex relative">
             <div className="w-1/2">
-              <div className="mb-12">
+              <div className="mb-8">
                 <Text className="text-[40px] font-normal">Nicholas Manha</Text>
                 <Text variant="h1">
                   {" "}
