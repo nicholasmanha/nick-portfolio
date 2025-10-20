@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Text from "@/components/ui/Text";
 import React from "react";
 import ScrollArrow from "@/components/ScrollArrow";
+import ReactEDM from '@/assets/ReactEDM.png'
 
 function Home() {
   return (
@@ -61,28 +62,30 @@ function Home() {
           </div>
           <div className="h-px bg-foreground w-full"></div>
         </div>
-        <ScrollArrow/>
+        <ScrollArrow />
       </div>
-      
+
       <div className="max-w-screen-xl mx-auto">
-        <Text variant="h2" emphasis className="mx-4">Experience</Text>
-        <ProjectCard className="my-8">
-          <Icon icon="Python" variant="ghost" size="small" />
-          <Icon icon="Handshake" variant="ghost-muted" size="small" />
-          <Icon icon="Amazon" size="small" />
-          <Icon icon="TypeScript" />
-          <Text variant="h1">
-            {" "}
-            Full-Stack{" "}
-            <Text variant="h1" color="primary" as="span">
-              Software
-            </Text>{" "}
-            Engineer
-          </Text>
-          <Text className="text-[40px] font-normal"> Full-Stack Engineer</Text>
-          <Skill>React</Skill>
-          <Button variant="default">SEE MORE</Button>
-          <Button variant="outline">CODE</Button>
+        <Text variant="h2" emphasis className="mx-4">
+          Experience
+        </Text>
+        <ProjectCard
+          title="Software Engineer Intern"
+          location="Lawrence Berkeley National Lab"
+          date="June 2025 - Aug 2025"
+          skills={["TypeScript", "React", "JavaScript", "Python", "Figma", "Tailwind"]}
+          seeMore="https://example.com"
+        >
+          <ProjectCard.Image>
+            <img
+              src={ReactEDM}
+              alt="Project screenshot"
+              className="rounded-lg"
+            />
+          </ProjectCard.Image>
+          <ProjectCard.Description>
+            This is the project description text.
+          </ProjectCard.Description>
         </ProjectCard>
       </div>
     </>
