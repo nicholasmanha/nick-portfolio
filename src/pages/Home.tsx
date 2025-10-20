@@ -10,11 +10,12 @@ import LeadViver from "@/assets/leadviver.png";
 import Banking from "@/assets/banking.png";
 import experienceData from "@/assets/experience.json";
 import projectsData from "@/assets/projects.json";
+import Footer from "@/components/Footer";
 
 const imageMap: Record<string, string> = {
   ReactEDM: ReactEDM,
   LeadViver: LeadViver,
-  Banking: Banking
+  Banking: Banking,
 };
 
 function Home() {
@@ -175,7 +176,27 @@ function Home() {
             </ProjectCard.Description>
           </ProjectCard>
         ))}
+
+        <Text variant="h2" emphasis className="mt-20">
+          Skills & Frameworks
+        </Text>
+        <div className="flex gap-6 my-8 items-center">
+          <Icon icon="TypeScript" />
+          <Icon icon="React" />
+          <Icon icon="JavaScript" />
+          <Icon icon="Python" />
+          <Icon icon="Tailwind" />
+          <Icon icon="ExpressJS" />
+          <Icon icon="Java" />
+          <Icon icon="Figma" />
+          <Icon icon="Amazon" />
+          <Icon icon="Aurora" />
+          <Skill>Public Speaking</Skill>
+          <Skill>Communication</Skill>
+        </div>
       </div>
+
+      <Footer/>
     </>
   );
 }
