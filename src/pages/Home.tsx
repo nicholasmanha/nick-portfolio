@@ -6,6 +6,7 @@ import Text from "@/components/ui/Text";
 import React from "react";
 import ScrollArrow from "@/components/ScrollArrow";
 import ReactEDM from "@/assets/ReactEDM.png";
+import LeadViver from "@/assets/leadviver.png";
 
 function Home() {
   return (
@@ -69,6 +70,7 @@ function Home() {
         <Text variant="h2" emphasis className="mx-4">
           Experience
         </Text>
+
         <ProjectCard
           title="Software Engineer Intern"
           location="Lawrence Berkeley National Lab"
@@ -82,6 +84,8 @@ function Home() {
             "Tailwind",
           ]}
           seeMore="https://example.com"
+          docs="https://example.com/docs"
+          code="https://example.com/code"
         >
           <ProjectCard.Image>
             <img
@@ -97,6 +101,53 @@ function Home() {
                 <Text variant="small" as="span">
                   see demo →
                 </Text>
+              </Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan
+              vestibulum. Sed maximus lectus sit amet quam scelerisque molestie.
+              Pellentesque non lorem nibh. Donec in fermentum ligula. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos. Maecenas feugiat libero eget ex mollis
+              viverra. Quisque mi purus, venenatis lobortis lorem nibh. Donec in
+              fermentum ligula. Class aptent taciti
+            </div>
+            <Text variant="h4">What I Learned </Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium
+            vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum.
+            Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque
+            non lorem nibh. Donec in fermentum ligula. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos. Maecenas feugiat libero eget ex mollis vive.
+          </ProjectCard.Description>
+        </ProjectCard>
+
+        <ProjectCard
+          title="Full-Stack Software Engineer"
+          location="Terence Davis & Associates"
+          date="May 2024 - Aug 2024"
+          skills={[
+            "TypeScript",
+            "React",
+            "JavaScript",
+            "Figma",
+            "Tailwind",
+            "Amazon",
+            "Aurora"
+          ]}
+          seeMore="https://example.com"
+          code="https://example.com/code"
+        >
+          <ProjectCard.Image>
+            <img
+              src={LeadViver}
+              alt="Project screenshot"
+              className="rounded-lg"
+            />
+          </ProjectCard.Image>
+          <ProjectCard.Description>
+            <div className="mb-4">
+              <Text variant="h4">
+                What I Made{" "}
               </Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
               pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan

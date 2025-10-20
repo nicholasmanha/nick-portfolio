@@ -107,7 +107,7 @@ const Image: React.FC<ProjectCardImageProps> = ({
   children,
   className = "",
 }) => {
-  return <div className={cn("w-full h-full flex justify-center", className)}>{children}</div>;
+  return <div className={cn("w-full flex justify-center", className)}>{children}</div>;
 };
 
 ProjectCard.Description = Description;
