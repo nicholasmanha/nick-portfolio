@@ -7,13 +7,15 @@ import React from "react";
 import ScrollArrow from "@/components/ScrollArrow";
 import ReactEDM from "@/assets/ReactEDM.png";
 import LeadViver from "@/assets/leadviver.png";
+import Banking from "@/assets/banking.png";
+import experienceData from "@/assets/experience.json";
 import projectsData from "@/assets/projects.json";
 
 const imageMap: Record<string, string> = {
   ReactEDM: ReactEDM,
   LeadViver: LeadViver,
+  Banking: Banking
 };
-
 
 function Home() {
   return (
@@ -78,51 +80,101 @@ function Home() {
           Experience
         </Text>
 
+        {experienceData.map((experience, index) => (
+          <ProjectCard
+            key={index}
+            title={experience.title}
+            location={experience.location}
+            date={experience.date}
+            skills={experience.skills}
+            seeMore={experience.seeMore}
+            docs={experience.docs}
+            code={experience.code}
+          >
+            {experience.image && (
+              <ProjectCard.Image>
+                <img
+                  src={imageMap[experience.image as keyof typeof imageMap]}
+                  alt={`${experience.title} screenshot`}
+                  className="rounded-lg"
+                />
+              </ProjectCard.Image>
+            )}
+            <ProjectCard.Description>
+              {experience.description.whatIMade && (
+                <div className="mb-4">
+                  <Text variant="h4">
+                    What I Made{" "}
+                    {experience.description.showDemo && (
+                      <Text variant="small" as="span">
+                        see demo →
+                      </Text>
+                    )}
+                  </Text>
+                  {experience.description.whatIMade}
+                </div>
+              )}
+              {experience.description.whatIDid && (
+                <div className="mb-4">
+                  <Text variant="h4">What I Did </Text>
+                  {experience.description.whatIDid}
+                </div>
+              )}
+              <Text variant="h4">What I Learned </Text>
+              {experience.description.whatILearned}
+            </ProjectCard.Description>
+          </ProjectCard>
+        ))}
+
+        <Text variant="h2" emphasis className="mx-4 mt-20">
+          Projects
+        </Text>
+
         {projectsData.map((project, index) => (
-        <ProjectCard
-          key={index}
-          title={project.title}
-          location={project.location}
-          date={project.date}
-          skills={project.skills}
-          seeMore={project.seeMore}
-          docs={project.docs}
-          code={project.code}
-        >
-          {project.image && (
-            <ProjectCard.Image>
-              <img
-                src={imageMap[project.image as keyof typeof imageMap]}
-                alt={`${project.title} screenshot`}
-                className="rounded-lg"
-              />
-            </ProjectCard.Image>
-          )}
-          <ProjectCard.Description>
-            {project.description.whatIMade && (
-              <div className="mb-4">
-                <Text variant="h4">
-                  What I Made{" "}
-                  {project.description.showDemo && (
-                    <Text variant="small" as="span">
-                      see demo →
-                    </Text>
-                  )}
-                </Text>
-                {project.description.whatIMade}
-              </div>
+          <ProjectCard
+            key={index}
+            title={project.title}
+            location={project.location}
+            date={project.date}
+            skills={project.skills}
+            seeMore={project.seeMore}
+            // docs={project.docs}
+            code={project.code}
+          >
+            {project.image && (
+              <ProjectCard.Image>
+                <img
+                  src={imageMap[project.image as keyof typeof imageMap]}
+                  alt={`${project.title} screenshot`}
+                  className="rounded-lg"
+                />
+              </ProjectCard.Image>
             )}
-            {project.description.whatIDid && (
-              <div className="mb-4">
-                <Text variant="h4">What I Did </Text>
-                {project.description.whatIDid}
-              </div>
-            )}
-            <Text variant="h4">What I Learned </Text>
-            {project.description.whatILearned}
-          </ProjectCard.Description>
-        </ProjectCard>
-      ))}
+            <ProjectCard.Description>
+              {project.description.whatIMade && (
+                <div className="mb-4">
+                  <Text variant="h4">
+                    What I Made{" "}
+                    {project.description.showDemo && (
+                      <Text variant="small" as="span">
+                        see demo →
+                      </Text>
+                    )}
+                  </Text>
+                  {project.description.whatIMade}
+                </div>
+              )}
+              {/* {project.description.whatIDid && (
+                <div className="mb-4">
+                  <Text variant="h4">What I Did </Text>
+                  {project.description.whatIDid}
+                </div>
+              )} */}
+              <Text variant="h4">What I Learned </Text>
+              {project.description.whatILearned}
+            </ProjectCard.Description>
+          </ProjectCard>
+        ))}
       </div>
     </>
   );
