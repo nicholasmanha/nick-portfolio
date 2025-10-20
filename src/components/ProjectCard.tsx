@@ -39,35 +39,56 @@ const ProjectCard: React.FC<ProjectCardProps> & {
   children, 
   className = '' 
 }) => {
+  // Extract Image and Description from children
+  const childrenArray = React.Children.toArray(children);
+  const imageComponent = childrenArray.find(
+    (child) => React.isValidElement(child) && child.type === Image
+  );
+  const otherChildren = childrenArray.filter(
+    (child) => !(React.isValidElement(child) && child.type === Image)
+  );
+
   return (
     <div className={cn("bg-surface rounded-card p-16", className)}>
-      <Text variant="h3">{title}</Text>
-      <Text variant="p">{location}</Text>
-      <Text variant="p">{date}</Text>
+      <div className="flex gap-8">
+        {/* Left side - content */}
+        <div className="flex-1">
+          <Text variant="h3">{title}</Text>
+          <Text variant="p">{location}</Text>
+          <Text variant="p">{date}</Text>
 
-      <div className="flex flex-wrap gap-4 my-4 items-center">
-        {skills.map((skill, index) => (
-          <Icon key={index} icon={skill} size="small" />
-        ))}
-      </div>
+          <div className="flex flex-wrap gap-4 my-4 items-center">
+            {skills.map((skill, index) => (
+              <Icon key={index} icon={skill} size="small" />
+            ))}
+          </div>
 
-      {children}
+          {otherChildren}
 
-      <div className="flex gap-4 mt-6">
-        {seeMore && (
-          <a href={seeMore} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-            See More →
-          </a>
-        )}
-        {docs && (
-          <a href={docs} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-            Docs →
-          </a>
-        )}
-        {code && (
-          <a href={code} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-            Code →
-          </a>
+          <div className="flex gap-4 mt-6">
+            {seeMore && (
+              <a href={seeMore} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                See More →
+              </a>
+            )}
+            {docs && (
+              <a href={docs} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                Docs →
+              </a>
+            )}
+            {code && (
+              <a href={code} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                Code →
+              </a>
+            )}
+          </div>
+        </div>
+
+        {/* Right side - image */}
+        {imageComponent && (
+          <div className="flex-1">
+            {imageComponent}
+          </div>
         )}
       </div>
     </div>
@@ -84,7 +105,7 @@ const Description: React.FC<ProjectCardDescriptionProps> = ({ children, classNam
 
 const Image: React.FC<ProjectCardImageProps> = ({ children, className = '' }) => {
   return (
-    <div className={cn("w-full mb-4", className)}>
+    <div className={cn("w-full h-full", className)}>
       {children}
     </div>
   );
