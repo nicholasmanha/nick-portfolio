@@ -49,8 +49,9 @@ function Text({
         {...props}
       >
         {children}
+        {emphasis && <div className="h-1.5 w-36 bg-primary -mt-2"/>}
       </Component>
-      {emphasis && <div className="h-1.5 w-36 bg-primary -mt-2"/>}
+      
     </>
   );
 }

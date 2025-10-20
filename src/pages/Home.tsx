@@ -63,9 +63,10 @@ function Home() {
         </div>
         <ScrollArrow/>
       </div>
-      <Text variant="h2" emphasis>Experience</Text>
+      
       <div className="max-w-screen-xl mx-auto">
-        <ProjectCard>
+        <Text variant="h2" emphasis className="mx-4">Experience</Text>
+        <ProjectCard className="my-8">
           <Icon icon="Python" variant="ghost" size="small" />
           <Icon icon="Handshake" variant="ghost-muted" size="small" />
           <Icon icon="Amazon" size="small" />
