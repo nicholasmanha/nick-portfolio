@@ -50,7 +50,7 @@ const ProjectCard: React.FC<ProjectCardProps> & {
   );
 
   return (
-    <div className={cn("bg-surface rounded-card p-16", className)}>
+    <div className={cn("bg-surface rounded-card p-16 my-8", className)}>
       <div className="flex gap-8">
         {/* Left side - content */}
         <div className="flex-1">
