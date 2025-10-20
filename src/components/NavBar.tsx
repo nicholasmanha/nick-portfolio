@@ -9,7 +9,7 @@ function NavBar() {
     return location.pathname === path;
   };
   return (
-    <nav className="bg-surface-elevated rounded-full text-foreground w-3/4 py-6 mb-8 mt-12 mx-auto">
+    <nav className="bg-surface-elevated rounded-full text-foreground w-3/4 py-4 my-8 mx-auto">
       <div className="max-w-screen-xl mx-auto">
         <div className="flex items-center justify-between gap-8">
           <Link to="/" className="text-xl font-bold">
