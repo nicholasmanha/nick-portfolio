@@ -34,20 +34,38 @@ function Button({
   variant,
   size,
   asChild = false,
+  link,
+  newTab = false,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
+    link?: string
+    newTab?: boolean
   }) {
   const Comp = asChild ? Slot : "button"
 
-  return (
+  const button = (
     <Comp
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     />
   )
+
+  if (link) {
+    return (
+      <a 
+        href={link} 
+        className="inline-block"
+        {...(newTab && { target: "_blank", rel: "noopener noreferrer" })}
+      >
+        {button}
+      </a>
+    )
+  }
+
+  return button
 }
 
 export { Button, buttonVariants }
