@@ -114,7 +114,7 @@ const Image: React.FC<ProjectCardImageProps> = ({
   className = "",
 }) => {
   return (
-    <div className={cn("w-full flex justify-center", className)}>
+    <div className={cn("w-full h-full flex justify-center items-center", className)}>
       {children}
     </div>
   );
