@@ -1,17 +1,20 @@
 import React from 'react'
 import Text from './ui/Text'
+
 interface SkillProps {
   children: React.ReactNode;
   className?: string;
+  variant?: 'small' | 'normal';
 }
 
 function Skill({
   className,
   children,
+  variant = 'normal',
 }: SkillProps) {
   return (
     <div className="inline-block border border-foreground bg-transparent rounded-full px-3 py-1">
-        <Text variant="small">{children}</Text>
+        <Text variant={variant === 'small' ? 'small' : 'p'}>{children}</Text>
     </div>
   )
 }
