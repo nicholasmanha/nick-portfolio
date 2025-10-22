@@ -39,11 +39,11 @@ function Home() {
                 </Text>
               </div>
               <div className="flex my-6 gap-4">
-                <Skill>React</Skill>
-                <Skill>TypeScript</Skill>
-                <Skill>Next.JS</Skill>
-                <Skill>JavaScript</Skill>
-                <Skill>Python</Skill>
+                <Skill variant="small">React</Skill>
+                <Skill variant="small">TypeScript</Skill>
+                <Skill variant="small">Next.JS</Skill>
+                <Skill variant="small">JavaScript</Skill>
+                <Skill variant="small">Python</Skill>
               </div>
               <div className="flex gap-2">
                 <Button variant="default">SEE EXPERIENCE</Button>
