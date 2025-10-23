@@ -7,6 +7,7 @@ import ScrollArrow from "@/components/ScrollArrow";
 import ReactEDM from "@/assets/ReactEDM.png";
 import LeadViver from "@/assets/leadviver.png";
 import Banking from "@/assets/banking.png";
+import Profile from "@/assets/profile_adjustment.png"
 import experienceData from "@/assets/experience.json";
 import projectsData from "@/assets/projects.json";
 import Footer from "@/components/Footer";
@@ -52,7 +53,7 @@ function Home() {
             </div>
             <div className="w-1/2 absolute right-[8%] bottom-0 h-full flex flex-col justify-end">
               <img
-                src="src\assets\profile_adjustment.png"
+                src={Profile}
                 alt="coding illustration"
                 className="max-h-full w-auto ml-auto"
               />
