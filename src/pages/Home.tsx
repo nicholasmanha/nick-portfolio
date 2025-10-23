@@ -7,10 +7,10 @@ import ScrollArrow from "@/components/ScrollArrow";
 import ReactEDM from "@/assets/ReactEDM.png";
 import LeadViver from "@/assets/leadviver.png";
 import Banking from "@/assets/banking.png";
-import Profile from "@/assets/profile_adjustment.png"
 import experienceData from "@/assets/experience.json";
 import projectsData from "@/assets/projects.json";
 import Footer from "@/components/Footer";
+import Profile from "@/assets/profile_adjustment.png"
 
 const imageMap: Record<string, string> = {
   ReactEDM: ReactEDM,
