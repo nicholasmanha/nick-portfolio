@@ -1,4 +1,3 @@
-import React from "react";
 import profile from "@/assets/portfolio_profile.png";
 import Text from "@/components/ui/Text";
 import Skill from "@/components/Skill";

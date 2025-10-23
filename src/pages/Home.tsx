@@ -3,7 +3,6 @@ import Skill from "@/components/Skill";
 import { Icon } from "@/components/Icon";
 import { Button } from "@/components/ui/button";
 import Text from "@/components/ui/Text";
-import React from "react";
 import ScrollArrow from "@/components/ScrollArrow";
 import ReactEDM from "@/assets/ReactEDM.png";
 import LeadViver from "@/assets/leadviver.png";

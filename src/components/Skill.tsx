@@ -1,4 +1,3 @@
-import React from 'react'
 import Text from './ui/Text'
 
 interface SkillProps {
@@ -8,7 +7,6 @@ interface SkillProps {
 }
 
 function Skill({
-  className,
   children,
   variant = 'normal',
 }: SkillProps) {
