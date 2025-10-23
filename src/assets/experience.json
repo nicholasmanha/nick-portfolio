@@ -16,8 +16,8 @@
     "code": "https://github.com/bluesky/finch",
     "image": "ReactEDM",
     "description": {
-      "whatIMade": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis viverra. Quisque mi purus, venenatis lobortis lorem nibh. Donec in fermentum ligula. Class aptent taciti",
-      "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis vive.",
+      "whatIMade": "My project, React Extensible Display Manager (ReactEDM), modernizes how beamline scientists control instruments at particle accelerators. Traditional systems rely on MEDM, outdated software that uses ADL files to define control screens connected to EPICS process variables. To replace this, I built ReactEDM using React and Ophyd Websocket (Python). It has two main parts: a parser that converts ADL files into structured data, and a display manager that renders them as interactive web interfaces. This modular design makes it easy to support other UI file types in the future. Now included in the Finch GitHub repository, ReactEDM provides a unified, web-based solution for controlling scientific instruments.",
+      "whatILearned": "During my internship, I learned how to work effectively with a mentor, communicate progress clearly, and design user-focused software. Regular meetings with my mentor, Seij De Leon, improved my project planning and collaboration skills. Weekly presentations strengthened my public speaking, and interviewing scientists from Berkeley Lab and Argonne National Laboratory taught me how to gather feedback and develop tools that meet real-world needs.",
       "showDemo": true
     }
   },
@@ -35,11 +35,11 @@
       "Aurora"
     ],
     "seeMore": "/leadviver",
-    "code": "https://example.com/code",
+    "code": "https://github.com/nicholasmanha/leadviver",
     "image": "LeadViver",
     "description": {
-      "whatIMade": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis viverra. Quisque mi purus, venenatis lobortis lorem nibh. Donec in fermentum ligula. Class aptent taciti",
-      "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis vive."
+      "whatIMade": "I was the lead developer for a CRM platform that allows real estate investors to purchase inactive (“dead”) leads and for lead owners to sell them. I handled every stage of development, from requirements gathering and UI design to frontend and backend implementation. I interviewed users to define project goals, designed the interface and system architecture in Figma, and built the frontend using React, Next.js, TypeScript, and Tailwind. On the backend, I developed AWS Lambda microservices and set up AWS Aurora databases for scalability and reliability. The result was a modular, cloud-based system designed for smooth performance and easy maintenance.",
+      "whatILearned": "From this project, I learned how to collaborate with experienced developers, communicate effectively with stakeholders, and give structured feedback. Regular meetings improved my ability to align technical work with project goals, while teamwork strengthened my coordination and version control skills. I also gained hands-on experience with Next.js, Tailwind, and AWS tools like Lambda, SAM, Cognito, and Aurora, learning to build scalable, serverless applications."
     }
   },
   {
@@ -53,8 +53,8 @@
     ],
     "seeMore": "/it",
     "description": {
-      "whatIDid": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non",
-      "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis vive."
+      "whatIDid": "As the first IT intern at Shasta College, I conducted a campus-wide audit of over 1,500 technology assets while keeping user needs in mind. I tested new student applications, gathering feedback on usability and accessibility to improve the end-user experience. I automated portions of the audit using Python scripts, which made processes more efficient and responsive to staff and student needs. I also presented findings and recommendations to the IT team to ensure technology resources and applications better served the campus community.",
+      "whatILearned": "This internship taught me how to prioritize customer service in a technical role. Working with students and IT staff, I learned to communicate clearly, gather user feedback, and translate it into actionable improvements. Presenting findings strengthened my ability to explain technical insights in a way that is meaningful to end users, while testing applications helped me focus on creating software that meets real user needs. I also gained practical skills with Python scripting, automation, and large-scale asset management, learning how to apply technical solutions to improve the experience of staff and students."
     }
   },
   {
@@ -67,8 +67,8 @@
     ],
     "seeMore": "/tutor",
     "description": {
-      "whatIDid": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non",
-      "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis vive."
+      "whatIDid": "As a STEM tutor at Shasta College, I provided one-on-one and group support to students in Calculus, Statistics, Linear Algebra, and introductory programming. I broke down complex concepts into manageable steps, connecting abstract topics to real-world examples to help students build problem-solving skills and confidence. I collaborated with other tutors to share strategies and ensure consistent support, while tailoring sessions to each student’s learning style to maximize understanding and academic success.",
+      "whatILearned": "From this tutoring experience, I learned how to translate complex STEM concepts into clear, understandable lessons and adapt my teaching to different learning styles. I developed skills in mentorship and encouragement, helping students build confidence while mastering challenging material. Collaborating with other tutors taught me new strategies and strengthened my teamwork, while regularly explaining topics like calculus, statistics, and programming reinforced my own technical knowledge and problem-solving abilities."
     }
   }
 ]

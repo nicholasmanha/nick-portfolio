@@ -14,8 +14,8 @@
     "seeMore": "/assist",
     "code": "https://github.com/nicholasmanha/assist-reverse-search",
     "description": {
-      "whatIMade": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis viverra. Quisque mi purus, venenatis lobortis lorem nibh. Donec in fermentum ligula. Class aptent taciti",
-      "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed maximus lectus sit amet quam scelerisque molestie. Pellentesque non lorem nibh. Donec in fermentum ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas feugiat libero eget ex mollis vive.",
+      "whatIMade": "Often, students using Assist.org struggle to find which colleges accept their specific courses for transfer credit. To solve this, I developed the Assist.org Reverse Search tool, a web application that allows users to input their completed courses and discover compatible colleges. Currently, this only exists as a python application, however I have plans to move this to a web application so it can be more user oriented. The app scrapes Assist.org data to match user courses with college requirements, providing a streamlined way for students to explore transfer options based on their academic history.",
+      "whatILearned": "Whilst building this, I learned how to effectively use web scraping techniques to gather and process data from APIs. I also learned the ecosystem of Python app development, including setting up virtual environments, managing dependencies with pip, and structuring projects for scalability. Additionally, I gained experience in designing user-friendly interfaces and implementing efficient search algorithms to enhance the user experience. This project also improved my problem-solving skills as I navigated challenges related to data accuracy and application performance.",
       "showDemo": false
     }
   },
@@ -29,11 +29,11 @@
       "Networking"
     ],
     "seeMore": "/banking",
-    "code": "https://example.com/code",
+    "code": "https://github.com/NFerreira98/Banking-System",
     "image": "Banking",
     "description": {
-      "whatIMade": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel sectetur adipiscing elit. Ut pretium velsectetur adipiscing elit. Ut",
-      "whatILearned": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium vel  sapien ut convallis. Sed vel ligula in nisl accumsan vestibulum. Sed"
+      "whatIMade": "As part of a four-person team, I worked on a semester-long Java software engineering project to build a banking application. I helped draft the requirements document, designed UML class diagrams and use case documents to map software structure, and coordinated team tasks to ensure steady progress. I implemented the Server and Client objects and created a custom Request class to handle structured messages for banking operations like account creation, deposits, withdrawals, and transfers, enabling reliable communication between the client and server.",
+      "whatILearned": "From this project, I learned the value of following a structured software engineering process, including requirements gathering, design, and documentation to guide development. Leading team coordination strengthened my communication and leadership skills, ensuring alignment and steady progress. I deepened my Java technical skills through implementing the server-client system and custom request handling, and gained experience in collaborative problem-solving by integrating team contributions into a cohesive application. Completing the project from start to finish also gave me practical insight into managing the full software development lifecycle."
     }
   }
 ]

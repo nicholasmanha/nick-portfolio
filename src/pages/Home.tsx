@@ -9,7 +9,6 @@ import LeadViver from "@/assets/leadviver.png";
 import Banking from "@/assets/banking.png";
 import experienceData from "@/assets/experience.json";
 import projectsData from "@/assets/projects.json";
-import Footer from "@/components/Footer";
 import Profile from "@/assets/profile_adjustment.png"
 
 const imageMap: Record<string, string> = {
@@ -46,9 +45,10 @@ function Home() {
                 <Skill variant="small">Python</Skill>
               </div>
               <div className="flex gap-2">
-                <Button variant="default">SEE EXPERIENCE</Button>
-                <Button variant="outline">RESUME</Button>
-                <Button variant="outline">CONTACT ME</Button>
+                <Button onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+  variant="default">SEE EXPERIENCE </Button>
+                {/* <Button variant="outline">RESUME</Button> */}
+                <Button link="/contact" variant="outline">CONTACT ME</Button>
               </div>
             </div>
             <div className="w-1/2 absolute right-[8%] bottom-0 h-full flex flex-col justify-end">
@@ -65,10 +65,10 @@ function Home() {
           <div className="flex flex-col items-center gap-6">
             <Text className="whitespace-nowrap">CONNECT WITH ME</Text>
             <div className="flex gap-6 justify-center">
-              <Icon variant="ghost" size="medium" icon="GitHub" />
-              <Icon variant="ghost" size="medium" icon="Linkedin" />
-              <Icon variant="ghost" size="medium" icon="StackOverflow" />
-              <Icon variant="ghost" size="medium" icon="Handshake" />
+              <a className="flex-shrink-0" target="_blank" href="https://github.com/nicholasmanha"><Icon variant="ghost" size="medium" icon="GitHub" /></a>
+              <a className="flex-shrink-0" target="_blank" href="https://www.linkedin.com/in/nicholas-manha/"><Icon variant="ghost" size="medium" icon="Linkedin" /></a>
+              <a className="flex-shrink-0" target="_blank" href="https://stackoverflow.com/users/14644022/nicholasm"><Icon variant="ghost" size="medium" icon="StackOverflow" /></a>
+              <a className="flex-shrink-0" target="_blank" href="https://app.joinhandshake.com/profiles/nctxta"><Icon variant="ghost" size="medium" icon="Handshake" /></a>
             </div>
           </div>
           <div className="h-px bg-foreground w-full"></div>
@@ -76,7 +76,7 @@ function Home() {
         <ScrollArrow />
       </div>
 
-      <div className="max-w-screen-xl mx-auto">
+      <div id="experience" className="max-w-screen-xl mx-auto">
         <Text variant="h2" emphasis className="mx-4">
           Experience
         </Text>
@@ -180,7 +180,7 @@ function Home() {
         <Text variant="h2" emphasis className="mt-20">
           Skills & Frameworks
         </Text>
-        <div className="flex gap-6 my-8 items-center">
+        <div className="flex gap-6 my-8 items-center min-w-0 content-start flex-wrap">
           <Icon icon="TypeScript" />
           <Icon icon="React" />
           <Icon icon="JavaScript" />
@@ -193,10 +193,24 @@ function Home() {
           <Icon icon="Aurora" />
           <Skill>Public Speaking</Skill>
           <Skill>Communication</Skill>
+          <Skill>Problem Solving</Skill>
+          <Skill>Customer Service</Skill>
+          <Skill>CI/CD</Skill>
+          <Skill>MongoDB</Skill>
+          <Skill>SQL</Skill>
+          <Skill>NextJS</Skill>
+          <Skill>AWS</Skill>
+          <Skill>Django</Skill>
+          <Skill>NodeJS</Skill>
+          <Skill>Git</Skill>
+          <Skill>Kubernetes</Skill>
+          <Skill>Docker</Skill>
+          <Skill>Linux</Skill>
+          <Skill>HTML/CSS</Skill>
         </div>
       </div>
 
-      <Footer/>
+      
     </>
   );
 }

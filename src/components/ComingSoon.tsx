@@ -1,9 +1,13 @@
-import Text from "@/components/ui/Text"
+import Text from "@/components/ui/Text";
 
 function ComingSoon() {
   return (
-    <Text variant="h1" emphasis>Coming Soon!</Text>
-  )
+    <div className="h-screen">
+      <Text variant="h1" emphasis>
+        Coming Soon!
+      </Text>
+    </div>
+  );
 }
 
-export default ComingSoon
+export default ComingSoon;
