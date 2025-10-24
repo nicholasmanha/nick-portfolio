@@ -7,7 +7,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Left side - Contact grid */}
           <div className="grid grid-cols-3 gap-4">
-            <a href="mailto:contact@example.com" className="hover:opacity-70 transition-opacity">
+            <a href="mailto:nickrmanha@gmail.com" className="hover:opacity-70 transition-opacity">
               <div className="flex gap-2"><Icon icon="mail" size="small" variant="ghost"></Icon> nickrmanha@gmail.com</div>
             </a>
             <a href="https://stackoverflow.com/users/14644022/nicholasm" className="hover:opacity-70 transition-opacity">
