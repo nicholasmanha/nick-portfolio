@@ -6,6 +6,8 @@ import Poster from "@/assets/NickMPosterFinal.png";
 import Slam1 from "@/assets/slam-1.png";
 import Slam4 from "@/assets/slam-4.png";
 import AreaDetector from "@/assets/beamline.png";
+import ADL from "@/assets/ADL.png";
+import ADLWorkFlow from "@/assets/ADLWorkflow.png";
 
 function Reactedm() {
   return (
@@ -71,7 +73,10 @@ function Reactedm() {
           <Text>
             <div
               className="float-right ml-6 mb-4 max-w-xl"
-              style={{ shapeOutside: `url(${AreaDetector})`, shapeMargin: "0.5rem" }}
+              style={{
+                shapeOutside: `url(${AreaDetector})`,
+                shapeMargin: "0.5rem",
+              }}
             >
               <img
                 src={AreaDetector}
@@ -85,22 +90,22 @@ function Reactedm() {
             This article is going to use some jargon that you may not be aware
             of, so here are some terms and what they mean.{" "}
             <br className="mb-1" />
-            <strong>Beamline</strong> - An end-station for a particle accelerator. It takes the
-            beam output from the accelerator and focuses it on a particular
-            experiment setup. To the right is an example of a beamline.{" "}
-            <br className="mb-1" />
-            <strong>MEDM</strong> - Motif editor and display manager, legacy software that
-            manages and displays control screens for an area detector.{" "}
-            <br className="mb-1" />
-            <strong>Control Screen</strong> - Panel used to control parameters of a scientific
-            instrument<sup>1</sup>. <br className="mb-1" />
-            <strong>Area Detector</strong> - Think of it as a camera for a particle accelerator.{" "}
-            <br className="mb-1" />
-            <strong>EPICS</strong> - Experimental Physics and Industrial Control System, the
-            software that is used to controlcomplex scientific instruments.{" "}
-            <br className="mb-1" />
-            <strong>PV</strong> - Process variable, a variable that corresponds to a parameter on
-            some machine.{" "}
+            <strong>Beamline</strong> - An end-station for a particle
+            accelerator. It takes the beam output from the accelerator and
+            focuses it on a particular experiment setup. To the right is an
+            example of a beamline. <br className="mb-1" />
+            <strong>MEDM</strong> - Motif editor and display manager, legacy
+            software that manages and displays control screens for an area
+            detector. <br className="mb-1" />
+            <strong>Control Screen</strong> - Panel used to control parameters
+            of a scientific instrument<sup>1</sup>. <br className="mb-1" />
+            <strong>Area Detector</strong> - Think of it as a camera for a
+            particle accelerator. <br className="mb-1" />
+            <strong>EPICS</strong> - Experimental Physics and Industrial Control
+            System, the software that is used to controlcomplex scientific
+            instruments. <br className="mb-1" />
+            <strong>PV</strong> - Process variable, a variable that corresponds
+            to a parameter on some machine.{" "}
           </Text>
           <Text variant="h4">
             The{" "}
@@ -140,33 +145,47 @@ function Reactedm() {
             </Text>
           </Text>
           <Text>
-            These files are structured very similarly to JSON, with some missing
-            syntax. They contain widgets, or UI elements, along with any
-            metadata for those elements, like position and size. The example to
-            the right defines a text widget, which is located at (58, 286) and
-            is 100 pixels wide and 20 pixels tall2. It is aligned right, and
-            says “Connection”. MEDM supports 25 different widgets, some more
-            complicated than others.
-          </Text>
-          <Text variant="h4">
-            <Text as="span" variant="h4" color="primary">
-              My{" "}
+            <div
+              className="float-right ml-6 mb-4 max-w-xl p-4"
+              style={{ shapeOutside: `url(${ADL})`, shapeMargin: "4rem" }}
+            >
+              <img src={ADL} alt="Beamline area detector" className="w-full" />
+              <Text variant="small" className="text-center mt-2">
+                Figure 1 - Example of a beamline w/ an area detector
+              </Text>
+            </div>
+            <Text>
+              These files are structured very similarly to JSON, with some
+              missing syntax. They contain widgets, or UI elements, along with
+              any metadata for those elements, like position and size. The
+              example to the right defines a text widget, which is located at
+              (58, 286) and is 100 pixels wide and 20 pixels tall2. It is
+              aligned right, and says “Connection”. MEDM supports 25 different
+              widgets, some more complicated than others.
             </Text>
-            Solution
+            <Text variant="h4">
+              <Text as="span" variant="h4" color="primary">
+                My{" "}
+              </Text>
+              Solution
+            </Text>
+            <Text>
+              The technology I used was React, along with Ophyd Websocket
+              (Python) to communicate to EPICS. I wanted my software to be
+              future proof, so I decided to design it in two main parts, the
+              parser and the display manager. The parser’s job was to take the
+              ADL file and reorganize it into a data structure that my display
+              manager can work with. The display manager’s job was to take that
+              organized data structure and turn it into React components so it
+              could be rendered onto a web browser. Doing it like this allowed
+              for future support for otherUI file types. The only thing that
+              needed to be added was a different parser for whatever file format
+              you’d liketo support. In the case of ADL files, I designed the
+              simple workflow below3.
+            </Text>
+            <img className="max-w-3xl" src={ADLWorkFlow}></img>
           </Text>
-          <Text>
-            The technology I used was React, along with Ophyd Websocket (Python)
-            to communicate to EPICS. I wanted my software to be future proof, so
-            I decided to design it in two main parts, the parser and the display
-            manager. The parser’s job was to take the ADL file and reorganize it
-            into a data structure that my display manager can work with. The
-            display manager’s job was to take that organized data structure and
-            turn it into React components so it could be rendered onto a web
-            browser. Doing it like this allowed for future support for otherUI
-            file types. The only thing that needed to be added was a different
-            parser for whatever file format you’d liketo support. In the case of
-            ADL files, I designed the simple workflow below3.
-          </Text>
+
           <Text>
             I ended up calling this software React Extensible Display Manager
             (ReactEDM). Not only does this get rid of one more headache when
@@ -234,14 +253,22 @@ function Reactedm() {
             current software and some wanted features for my project.
           </Text>
           <img src={Poster}></img>
-          <div className="bg-surface rounded-xl">
-            <div className="flex">
-              <div className="flex-1">
+          <div className="bg-surface rounded-xl py-8 -mx-8">
+            <div className="flex items-center gap-16 max-w-6xl justify-center mx-auto ">
+              <div className="flex-1 px-8 flex flex-col items-center">
                 <img src={Slam1}></img>
+                <Text>
+                  Figure 5 - Giving a one minute pitch during the poster slam
+                </Text>
               </div>
 
-              <div className="flex-1">
-                <img src={Slam4}></img>
+              <div className="flex-1 px-8 flex flex-col items-center">
+                <img className="w-4/5" src={Slam4}></img>
+
+                <Text>
+                  Figure 6 - Accepting the award for 3rd best Pitch at the
+                  poster slam
+                </Text>
               </div>
             </div>
           </div>
