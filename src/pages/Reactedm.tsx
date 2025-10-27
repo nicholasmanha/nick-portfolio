@@ -5,6 +5,7 @@ import ReactEDM from "@/assets/ReactEDM.png";
 import Poster from "@/assets/NickMPosterFinal.png";
 import Slam1 from "@/assets/slam-1.png";
 import Slam4 from "@/assets/slam-4.png";
+import AreaDetector from "@/assets/beamline.png";
 
 function Reactedm() {
   return (
@@ -66,22 +67,39 @@ function Reactedm() {
               Definitions
             </Text>
           </Text>
+
           <Text>
+            <div
+              className="float-right ml-6 mb-4 max-w-xl"
+              style={{ shapeOutside: `url(${AreaDetector})`, shapeMargin: "0.5rem" }}
+            >
+              <img
+                src={AreaDetector}
+                alt="Beamline area detector"
+                className="w-full"
+              />
+              <Text variant="small" className="text-center mt-2">
+                Figure 1 - Example of a beamline w/ an area detector
+              </Text>
+            </div>
             This article is going to use some jargon that you may not be aware
-            of, so here are some terms and what they mean. <br />
-            Beamline - An end-station for a particle accelerator. It takes the
+            of, so here are some terms and what they mean.{" "}
+            <br className="mb-1" />
+            <strong>Beamline</strong> - An end-station for a particle accelerator. It takes the
             beam output from the accelerator and focuses it on a particular
-            experiment setup. To the right is an example of a beamline. <br />
-            MEDM - Motif editor and display manager, legacy software that
-            manages and displays control screens for an area detector. <br />
-            Control Screen - Panel used to control parameters of a scientific
-            instrument1. <br />
-            Area Detector - Think of it as a camera for a particle accelerator.{" "}
-            <br />
-            EPICS - Experimental Physics and Industrial Control System, the
+            experiment setup. To the right is an example of a beamline.{" "}
+            <br className="mb-1" />
+            <strong>MEDM</strong> - Motif editor and display manager, legacy software that
+            manages and displays control screens for an area detector.{" "}
+            <br className="mb-1" />
+            <strong>Control Screen</strong> - Panel used to control parameters of a scientific
+            instrument<sup>1</sup>. <br className="mb-1" />
+            <strong>Area Detector</strong> - Think of it as a camera for a particle accelerator.{" "}
+            <br className="mb-1" />
+            <strong>EPICS</strong> - Experimental Physics and Industrial Control System, the
             software that is used to controlcomplex scientific instruments.{" "}
-            <br />
-            PV - Process variable, a variable that corresponds to a parameter on
+            <br className="mb-1" />
+            <strong>PV</strong> - Process variable, a variable that corresponds to a parameter on
             some machine.{" "}
           </Text>
           <Text variant="h4">
@@ -218,9 +236,13 @@ function Reactedm() {
           <img src={Poster}></img>
           <div className="bg-surface rounded-xl">
             <div className="flex">
-              <div className="flex-1"><img src={Slam1}></img></div>
-              
-              <div className="flex-1"><img src={Slam4}></img></div>
+              <div className="flex-1">
+                <img src={Slam1}></img>
+              </div>
+
+              <div className="flex-1">
+                <img src={Slam4}></img>
+              </div>
             </div>
           </div>
         </div>
