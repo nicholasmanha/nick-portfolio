@@ -14,11 +14,47 @@ function Contact() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch('https://nick-portfolio-backend.vercel.app/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: "jeffrickmyers@gmail.com",
+          message: `${formData.message}\n\nCompany: ${formData.company}\nPhone: ${formData.phone}\nSubject: ${formData.subject}`,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setSubmitted(true);
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (err) {
+      setError('Failed to send message. Please try again.');
+      console.error('Error sending email:', err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (
@@ -30,14 +66,6 @@ function Contact() {
     });
   };
 
-  // const socialLinks = [
-  //   { icon: Facebook, label: 'Facebook', href: '#', color: 'hover:text-blue-600' },
-  //   { icon: Twitter, label: 'Twitter', href: '#', color: 'hover:text-sky-500' },
-  //   { icon: Linkedin, label: 'LinkedIn', href: '#', color: 'hover:text-blue-700' },
-  //   { icon: Github, label: 'GitHub', href: '#', color: 'hover:text-gray-900' },
-  //   { icon: Instagram, label: 'Instagram', href: '#', color: 'hover:text-pink-600' }
-  // ];
-
   return (
     <div className="max-w-screen-xl mx-auto px-4 py-16">
       <div className="mb-12">
@@ -47,7 +75,7 @@ function Contact() {
             Me
           </Text>
         </Text>
-        <Text variant="h4">Let’s get in touch</Text>
+        <Text variant="h4">Let's get in touch</Text>
       </div>
 
       <div className="grid md:grid-cols-2 gap-32">
@@ -56,6 +84,12 @@ function Contact() {
           {submitted && (
             <div className="mb-6 p-4 bg-surface-elevated border border-green-900 rounded-lg text-green-200">
               Thank you! Your message has been sent successfully.
+            </div>
+          )}
+
+          {error && (
+            <div className="mb-6 p-4 bg-surface-elevated border border-red-900 rounded-lg text-red-200">
+              {error}
             </div>
           )}
 
@@ -147,8 +181,10 @@ function Contact() {
               />
             </div>
 
-            <button onClick={handleSubmit} className="">
-              <Button>Send Message</Button>
+            <button onClick={handleSubmit} disabled={isLoading}>
+              <Button disabled={isLoading}>
+                {isLoading ? 'Sending...' : 'Send Message'}
+              </Button>
             </button>
           </div>
         </div>
