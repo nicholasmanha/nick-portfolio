@@ -9,7 +9,9 @@ import LeadViver from "@/assets/leadviver1.png";
 import Banking from "@/assets/banking.png";
 import experienceData from "@/assets/experience.json";
 import projectsData from "@/assets/projects.json";
-import Profile from "@/assets/profile_adjustment.webp"
+import Profile from "@/assets/profile_adjustment.webp";
+import profile_compressed from "@/assets/profile_adjustment_compressed.webp";
+import ScrollingSkills from "@/components/ScrollingSkills";
 
 const imageMap: Record<string, string> = {
   ReactEDM: ReactEDM,
@@ -37,26 +39,30 @@ function Home() {
                   Experienced in building products from start to finish
                 </Text>
               </div>
-              <div className="flex my-6 gap-4">
-                <Skill variant="small">React</Skill>
-                <Skill variant="small">TypeScript</Skill>
-                <Skill variant="small">Next.JS</Skill>
-                <Skill variant="small">JavaScript</Skill>
-                <Skill variant="small">Python</Skill>
-              </div>
+              <ScrollingSkills className="my-6" skills={['React', 'TypeScript', 'Next.JS', 'JavaScript', 'Python']} />
               <div className="flex gap-2">
-                <Button onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
-  variant="default">SEE EXPERIENCE </Button>
+                <Button
+                  onClick={() =>
+                    document
+                      .getElementById("experience")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  variant="default"
+                >
+                  SEE EXPERIENCE{" "}
+                </Button>
                 {/* <Button variant="outline">RESUME</Button> */}
-                <Button link="/contact" variant="outline">CONTACT ME</Button>
+                <Button link="/contact" variant="outline">
+                  CONTACT ME
+                </Button>
               </div>
             </div>
             <div className="w-1/2 absolute right-[8%] bottom-0 h-full flex flex-col justify-end">
               <img
-  src={Profile}
-  alt="coding illustration"
-  className="h-full w-auto ml-auto"
-/>
+                src={Profile}
+                alt={profile_compressed}
+                className="h-full w-auto ml-auto"
+              />
             </div>
           </div>
         </div>
@@ -65,10 +71,34 @@ function Home() {
           <div className="flex flex-col items-center gap-6">
             <Text className="whitespace-nowrap">CONNECT WITH ME</Text>
             <div className="flex gap-6 justify-center">
-              <a className="flex-shrink-0" target="_blank" href="https://github.com/nicholasmanha"><Icon variant="ghost" size="medium" icon="GitHub" /></a>
-              <a className="flex-shrink-0" target="_blank" href="https://www.linkedin.com/in/nicholas-manha/"><Icon variant="ghost" size="medium" icon="Linkedin" /></a>
-              <a className="flex-shrink-0" target="_blank" href="https://stackoverflow.com/users/14644022/nicholasm"><Icon variant="ghost" size="medium" icon="StackOverflow" /></a>
-              <a className="flex-shrink-0" target="_blank" href="https://app.joinhandshake.com/profiles/nctxta"><Icon variant="ghost" size="medium" icon="Handshake" /></a>
+              <a
+                className="flex-shrink-0"
+                target="_blank"
+                href="https://github.com/nicholasmanha"
+              >
+                <Icon variant="ghost" size="medium" icon="GitHub" />
+              </a>
+              <a
+                className="flex-shrink-0"
+                target="_blank"
+                href="https://www.linkedin.com/in/nicholas-manha/"
+              >
+                <Icon variant="ghost" size="medium" icon="Linkedin" />
+              </a>
+              <a
+                className="flex-shrink-0"
+                target="_blank"
+                href="https://stackoverflow.com/users/14644022/nicholasm"
+              >
+                <Icon variant="ghost" size="medium" icon="StackOverflow" />
+              </a>
+              <a
+                className="flex-shrink-0"
+                target="_blank"
+                href="https://app.joinhandshake.com/profiles/nctxta"
+              >
+                <Icon variant="ghost" size="medium" icon="Handshake" />
+              </a>
             </div>
           </div>
           <div className="h-px bg-foreground w-full"></div>
@@ -211,8 +241,6 @@ function Home() {
           <Skill>HTML/CSS</Skill>
         </div>
       </div>
-
-      
     </>
   );
 }
