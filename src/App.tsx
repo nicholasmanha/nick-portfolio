@@ -4,12 +4,12 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About.tsx";
 import Layout from "./pages/Layout.tsx";
-import Reactedm from "./pages/Reactedm.tsx";
-import Leadviver from "./pages/Leadviver.tsx";
-import It from "./pages/It.tsx";
-import Tutor from "./pages/Tutor.tsx";
-import Assist from "./pages/Assist.tsx";
-import Banking from "./pages/Banking.tsx";
+import Reactedm from "./pages/experience/Reactedm.tsx";
+import Leadviver from "./pages/experience/Leadviver.tsx";
+import It from "./pages/experience/It.tsx";
+import Tutor from "./pages/experience/Tutor.tsx";
+import Assist from "./pages/experience/Assist.tsx";
+import Banking from "./pages/experience/Banking.tsx";
 
 function App() {
   return (

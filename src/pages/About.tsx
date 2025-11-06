@@ -120,7 +120,7 @@ function About() {
           </Button>
         </div>
       </div>
-      <div className="flex w-1/2 mx-auto px-16 gap-16 items-center">
+      <div className="flex w-1/2 mx-auto px-16 gap-16 mb-16 items-center">
         <div className="h-px bg-foreground w-full"></div>
         <div className="flex flex-col items-center gap-6">
           <Text className="whitespace-nowrap">CONNECT WITH ME</Text>
