@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import Text from "@/components/ui/Text";
 import ScrollArrow from "@/components/ScrollArrow";
 import ReactEDM from "@/assets/ReactEDM.png";
-import LeadViver from "@/assets/leadviver.png";
+import LeadViver from "@/assets/leadviver1.png";
 import Banking from "@/assets/banking.png";
 import experienceData from "@/assets/experience.json";
 import projectsData from "@/assets/projects.json";
