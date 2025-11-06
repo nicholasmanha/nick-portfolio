@@ -213,7 +213,7 @@ function It() {
           </div>
         </div>
 
-        <Button link="/#experience">BACK TO HOME</Button>
+        <Button link="/">BACK TO HOME</Button>
       </div>
     </>
   );
