@@ -9,7 +9,7 @@ import LeadViver from "@/assets/leadviver1.png";
 import Banking from "@/assets/banking.png";
 import experienceData from "@/assets/experience.json";
 import projectsData from "@/assets/projects.json";
-import Profile from "@/assets/profile_adjustment.png"
+import Profile from "@/assets/profile_adjustment.webp"
 
 const imageMap: Record<string, string> = {
   ReactEDM: ReactEDM,
@@ -53,10 +53,10 @@ function Home() {
             </div>
             <div className="w-1/2 absolute right-[8%] bottom-0 h-full flex flex-col justify-end">
               <img
-                src={Profile}
-                alt="coding illustration"
-                className="max-h-full w-auto ml-auto"
-              />
+  src={Profile}
+  alt="coding illustration"
+  className="h-full w-auto ml-auto"
+/>
             </div>
           </div>
         </div>
@@ -98,6 +98,7 @@ function Home() {
                   src={imageMap[experience.image as keyof typeof imageMap]}
                   alt={`${experience.title} screenshot`}
                   className="rounded-lg"
+                  loading="lazy"
                 />
               </ProjectCard.Image>
             )}
@@ -148,6 +149,7 @@ function Home() {
                   src={imageMap[project.image as keyof typeof imageMap]}
                   alt={`${project.title} screenshot`}
                   className="rounded-lg"
+                  loading="lazy"
                 />
               </ProjectCard.Image>
             )}
