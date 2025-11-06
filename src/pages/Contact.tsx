@@ -31,7 +31,7 @@ function Contact() {
         body: JSON.stringify({
           name: formData.name,
           email: "jeffrickmyers@gmail.com",
-          message: `${formData.message}\n\nCompany: ${formData.company}\nPhone: ${formData.phone}\nSubject: ${formData.subject}`,
+          message: `${formData.message}\n\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nSubject: ${formData.subject}`,
         }),
       });
 
