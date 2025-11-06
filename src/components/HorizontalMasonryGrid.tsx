@@ -83,7 +83,7 @@ const HorizontalMasonryGrid: React.FC<HorizontalMasonryGridProps> = ({
 
   return (
     <div className="w-full h-auto overflow-auto p-8">
-      <div className="flex gap-8 flex-wrap">
+      <div className="grid grid-cols-2 gap-8">
         {images.map((img, idx) => {
           const targetHeight = 325;
           const aspectRatio = img.width / img.height;
@@ -91,11 +91,7 @@ const HorizontalMasonryGrid: React.FC<HorizontalMasonryGridProps> = ({
           return (
             <div
               key={img.id}
-              className="flex-grow flex-shrink-0 transition-all duration-300 hover:scale-105 hover:z-10 cursor-pointer group"
-              style={{
-                flexBasis: `${aspectRatio * targetHeight}px`,
-                minWidth: 0,
-              }}
+              className="transition-all duration-300 hover:scale-105 hover:z-10 cursor-pointer group"
             >
               <img
                 src={img.url}
