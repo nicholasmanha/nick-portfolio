@@ -4,8 +4,8 @@ import Skill from "@/components/Skill";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/Icon";
 import HorizontalMasonryGrid from "@/components/HorizontalMasonryGrid";
-import hack1 from "@/assets/hack-1.jpg";
-import slam1 from "@/assets/slam-1.png";
+import lab1 from "@/assets/lab-1.png";
+import lab5 from "@/assets/lab-5.png";
 
 function About() {
   return (
@@ -92,13 +92,16 @@ function About() {
         </div>
         <div className="h-px bg-foreground w-full"></div>
       </div>
-      <HorizontalMasonryGrid
-        images={[
-          slam1,
-          hack1,
+      <div className="max-w-screen-xl mx-auto">
+        <HorizontalMasonryGrid
+          images={[
+            lab1,
+            lab5,
 
-        ]}
-      />
+          ]}
+        />
+      </div>
+
     </>
   );
 }

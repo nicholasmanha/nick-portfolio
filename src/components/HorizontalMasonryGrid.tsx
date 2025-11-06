@@ -67,35 +67,31 @@ const HorizontalMasonryGrid: React.FC<HorizontalMasonryGridProps> = ({ images: i
         }
     };
 
-    const rows = 3;
-    const rowHeight = 250;
-    const gap = 16;
-
-
-
-
-
-
     return (
-        <div className="w-full h-screen bg-gray-900 overflow-auto p-8">
-            <div className="mb-6">
-                <h1 className="text-3xl font-bold text-white mb-2">Horizontal Masonry Grid</h1>
-                <p className="text-gray-400">{images.length} images loaded from project directory</p>
-            </div>
+        <div className="w-full h-screen overflow-auto p-8">
+            <div className="flex gap-8 flex-wrap">
+                {images.map((img, idx) => {
+                    const targetHeight = 300;
+                    const aspectRatio = img.width / img.height;
 
-            <div className="flex gap-2 flex-wrap justify-between">
-                {images.map((img, idx) => (
-                    <div
-                        key={img.id}
-                        className="flex-1 min-w-[200px] max-w-[400px] transition-all duration-300 hover:scale-105 hover:z-10 cursor-pointer group"
-                    >
-                        <img
-                            src={img.url}
-                            alt={`Image ${img.id}`}
-                            className="w-full h-auto object-cover shadow-lg"
-                        />
-                    </div>
-                ))}
+                    return (
+                        <div
+                            key={img.id}
+                            className="flex-grow flex-shrink-0 transition-all duration-300 hover:scale-105 hover:z-10 cursor-pointer group"
+                            style={{
+                                flexBasis: `${aspectRatio * targetHeight}px`,
+                                minWidth: 0
+                            }}
+                        >
+                            <img
+                                src={img.url}
+                                alt={`Image ${img.id}`}
+                                className="w-full object-cover shadow-lg"
+                                style={{ height: `${targetHeight}px` }}
+                            />
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );
