@@ -1,6 +1,11 @@
 import profile from "@/assets/portfolio_profile.png";
 import Text from "@/components/ui/Text";
 import Skill from "@/components/Skill";
+import { Button } from "@/components/ui/button";
+import { Icon } from "@/components/Icon";
+import HorizontalMasonryGrid from "@/components/HorizontalMasonryGrid";
+import hack1 from "@/assets/hack-1.jpg";
+import slam1 from "@/assets/slam-1.png";
 
 function About() {
   return (
@@ -61,9 +66,39 @@ function About() {
                 <Skill>HTML/CSS</Skill>
               </div>
             </div>
+
           </div>
+
+        </div>
+        <div className="flex justify-center my-32 gap-2">
+
+
+          <Button onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+            variant="default">SEE EXPERIENCE </Button>
+          {/* <Button variant="outline">RESUME</Button> */}
+          <Button link="/contact" variant="outline">CONTACT ME</Button>
         </div>
       </div>
+      <div className="flex w-1/2 mx-auto px-16 gap-16 items-center">
+        <div className="h-px bg-foreground w-full"></div>
+        <div className="flex flex-col items-center gap-6">
+          <Text className="whitespace-nowrap">CONNECT WITH ME</Text>
+          <div className="flex gap-6 justify-center">
+            <a className="flex-shrink-0" target="_blank" href="https://github.com/nicholasmanha"><Icon variant="ghost" size="medium" icon="GitHub" /></a>
+            <a className="flex-shrink-0" target="_blank" href="https://www.linkedin.com/in/nicholas-manha/"><Icon variant="ghost" size="medium" icon="Linkedin" /></a>
+            <a className="flex-shrink-0" target="_blank" href="https://stackoverflow.com/users/14644022/nicholasm"><Icon variant="ghost" size="medium" icon="StackOverflow" /></a>
+            <a className="flex-shrink-0" target="_blank" href="https://app.joinhandshake.com/profiles/nctxta"><Icon variant="ghost" size="medium" icon="Handshake" /></a>
+          </div>
+        </div>
+        <div className="h-px bg-foreground w-full"></div>
+      </div>
+      <HorizontalMasonryGrid
+        images={[
+          slam1,
+          hack1,
+
+        ]}
+      />
     </>
   );
 }
