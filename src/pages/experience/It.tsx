@@ -1,10 +1,5 @@
-import HorizontalMasonryGrid from "@/components/HorizontalMasonryGrid";
 import { Button } from "@/components/ui/button";
 import Text from "@/components/ui/Text";
-import leadviver2 from "@/assets/leadviver2.png";
-import leadviver3 from "@/assets/leadviver3.png";
-import leadviver4 from "@/assets/leadviver4.png";
-import leadviver5 from "@/assets/leadviver5.png";
 
 function It() {
   return (
