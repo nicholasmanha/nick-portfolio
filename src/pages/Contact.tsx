@@ -94,9 +94,9 @@ function Contact() {
           )}
 
           <div className="space-y-5">
-            <div className="flex gap-5">
-              <div className="flex flex-col gap-5 flex-1">
-                <div>
+            <div className="flex flex-col gap-5">
+              <div className="flex gap-5">
+                <div className="flex-1">
                   <label htmlFor="name" className="block mb-2">
                     <Text>Name</Text>
                   </label>
@@ -110,7 +110,7 @@ function Contact() {
                   />
                 </div>
 
-                <div>
+                <div className="flex-1">
                   <label htmlFor="email" className="block mb-2">
                     <Text>Email</Text>
                   </label>
@@ -124,8 +124,8 @@ function Contact() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col gap-5 flex-1">
-                <div>
+              <div className="flex gap-5 flex-1">
+                <div className="flex-1">
                   <label htmlFor="company" className="block mb-2">
                     <Text>Company Name</Text>
                   </label>
@@ -138,7 +138,7 @@ function Contact() {
                     onChange={handleChange}
                   />
                 </div>
-                <div>
+                <div className="flex-1">
                   <label htmlFor="phone" className="block mb-2">
                     <Text>Phone Number</Text>
                   </label>
