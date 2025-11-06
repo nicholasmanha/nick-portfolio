@@ -198,7 +198,7 @@ function Contact() {
                   target="_blank"
                   href="https://github.com/nicholasmanha"
                 >
-                  <div className="bg-primary rounded-full p-3 flex items-center justify-center">
+                  <div className="bg-primary rounded-full p-3 flex items-center justify-center transition-transform hover:scale-110">
                     <Icon variant="ghost" size="medium" icon="GitHub" />
                   </div>
                 </a>
@@ -207,7 +207,7 @@ function Contact() {
                   target="_blank"
                   href="https://www.linkedin.com/in/nicholas-manha/"
                 >
-                  <div className="bg-primary rounded-full p-3 flex items-center justify-center">
+                  <div className="bg-primary rounded-full p-3 flex items-center justify-center transition-transform hover:scale-110">
                     <Icon variant="ghost" size="medium" icon="Linkedin" />
                   </div>
                 </a>
@@ -216,7 +216,7 @@ function Contact() {
                   target="_blank"
                   href="https://stackoverflow.com/users/14644022/nicholasm"
                 >
-                  <div className="bg-primary rounded-full p-3 flex items-center justify-center">
+                  <div className="bg-primary rounded-full p-3 flex items-center justify-center transition-transform hover:scale-110">
                     <Icon variant="ghost" size="medium" icon="StackOverflow" />
                   </div>
                 </a>
@@ -225,7 +225,7 @@ function Contact() {
                   target="_blank"
                   href="https://app.joinhandshake.com/profiles/nctxta"
                 >
-                  <div className="bg-primary rounded-full p-3 flex items-center justify-center">
+                  <div className="bg-primary rounded-full p-3 flex items-center justify-center transition-transform hover:scale-110">
                     <Icon variant="ghost" size="medium" icon="Handshake" />
                   </div>
                 </a>
