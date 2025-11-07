@@ -1,4 +1,4 @@
-import profile from "@/assets/portfolio_profile.png";
+import profile from "@/assets/portfolio_profile.webp";
 import Text from "@/components/ui/Text";
 import Skill from "@/components/Skill";
 import { Button } from "@/components/ui/button";
