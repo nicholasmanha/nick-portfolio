@@ -23,20 +23,23 @@ function Contact() {
     setError("");
 
     try {
-      const response = await fetch('https://nick-portfolio-backend.vercel.app/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: "jeffrickmyers@gmail.com",
-          message: `${formData.message}\n\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nSubject: ${formData.subject}`,
-        }),
-      });
+      const response = await fetch(
+        "https://nick-portfolio-backend.vercel.app/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: "jeffrickmyers@gmail.com",
+            message: `${formData.message}\n\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nSubject: ${formData.subject}`,
+          }),
+        }
+      );
 
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        throw new Error("Failed to send message");
       }
 
       setSubmitted(true);
@@ -50,8 +53,8 @@ function Contact() {
       });
       setTimeout(() => setSubmitted(false), 3000);
     } catch (err) {
-      setError('Failed to send message. Please try again.');
-      console.error('Error sending email:', err);
+      setError("Failed to send message. Please try again.");
+      console.error("Error sending email:", err);
     } finally {
       setIsLoading(false);
     }
@@ -181,11 +184,9 @@ function Contact() {
               />
             </div>
 
-            <button onClick={handleSubmit} disabled={isLoading}>
-              <Button disabled={isLoading}>
-                {isLoading ? 'Sending...' : 'Send Message'}
-              </Button>
-            </button>
+            <Button onClick={handleSubmit} disabled={isLoading}>
+              {isLoading ? "Sending..." : "Send Message"}
+            </Button>
           </div>
         </div>
 
@@ -242,7 +243,6 @@ function Contact() {
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   );

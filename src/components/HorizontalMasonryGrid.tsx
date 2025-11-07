@@ -22,8 +22,6 @@ const HorizontalMasonryGrid: React.FC<HorizontalMasonryGridProps> = ({
   images: imageSrcs,
 }) => {
   const [images, setImages] = useState<ImageItem[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string>("");
 
   // load images on startup/when images change
   useEffect(() => {
@@ -32,8 +30,6 @@ const HorizontalMasonryGrid: React.FC<HorizontalMasonryGridProps> = ({
 
   const loadImages = async () => {
     try {
-      setLoading(true);
-      setError("");
 
       const loadedImages: ImageItem[] = [];
 
@@ -69,24 +65,18 @@ const HorizontalMasonryGrid: React.FC<HorizontalMasonryGridProps> = ({
       }
 
       if (loadedImages.length === 0) {
-        setError("No images could be loaded.");
       } else {
         setImages(loadedImages);
       }
-
-      setLoading(false);
     } catch (err) {
-      setError("Error loading images: " + (err as Error).message);
-      setLoading(false);
     }
   };
 
   return (
     <div className="w-full h-auto overflow-auto p-8">
       <div className="grid grid-cols-2 gap-8">
-        {images.map((img, idx) => {
+        {images.map((img) => {
           const targetHeight = 325;
-          const aspectRatio = img.width / img.height;
 
           return (
             <div
