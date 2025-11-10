@@ -4,7 +4,7 @@ import Text from "@/components/ui/Text";
 function It() {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto">
+      <div className="2xl:max-w-screen-xl lg:w-9/10 mx-auto">
         <div className="flex flex-col items-center">
           <Text variant="h1">
             <Text variant="h1" color="primary" as="span">
