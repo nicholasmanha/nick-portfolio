@@ -9,7 +9,7 @@ function NavBar() {
   };
   return (
     <nav className="bg-surface-elevated rounded-full text-foreground w-3/4 py-4 my-8 mx-auto">
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl lg:w-9/10 mx-auto">
         <div className="flex items-center justify-between gap-8">
           <Link to="/" className="text-xl font-bold">
             <Text className="font-black text-[24px]">Nicholas Manha</Text>

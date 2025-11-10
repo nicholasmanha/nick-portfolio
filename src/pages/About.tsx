@@ -14,7 +14,7 @@ import slam2 from "@/assets/slam-2.png";
 function About() {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto">
+      <div className="2xl:max-w-screen-xl lg:w-9/10 mx-auto">
         <div className="flex flex-col gap-32">
           <div className="flex gap-32">
             <div className="flex-1 min-w-0">
@@ -157,7 +157,7 @@ function About() {
         </div>
         <div className="h-px bg-foreground w-full"></div>
       </div>
-      <div className="max-w-screen-xl mx-auto">
+      <div className="2xl:max-w-screen-xl lg:w-9/10 mx-auto">
         <HorizontalMasonryGrid
           images={[
             { src: hack6}, // Shift up

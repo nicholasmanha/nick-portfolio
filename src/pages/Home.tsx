@@ -23,9 +23,9 @@ function Home() {
   return (
     <>
       <div className="h-screen">
-        <div className="bg-surface mx-auto w-9/10 rounded-lg mb-16 border border-border overflow-hidden">
-          <div className="max-w-screen-xl md:w-9/10 mx-auto pt-16 py-12 flex relative">
-            <div className="w-1/2">
+        <div className="bg-surface mx-auto w-9/10 rounded-lg 2xl:mb-16 lg:mb-8 border border-border overflow-hidden">
+          <div className="max-w-screen-xl lg:w-9/10 mx-auto pt-16 py-12 flex relative">
+            <div className="2xl:w-1/2 lg:w-2/3">
               <div className="mb-8">
                 <Text className="text-[40px] font-normal">Nicholas Manha</Text>
                 <Text variant="h1">
@@ -57,7 +57,7 @@ function Home() {
                 </Button>
               </div>
             </div>
-            <div className="w-1/2 absolute right-[8%] bottom-0 h-full flex flex-col justify-end">
+            <div className="w-1/2 absolute 2xl:right-[8%] lg:right-[0%] bottom-0 h-full flex flex-col justify-end">
               <img
                 src={Profile}
                 alt={profile_compressed}
@@ -106,7 +106,7 @@ function Home() {
         <ScrollArrow />
       </div>
 
-      <div id="experience" className="max-w-screen-xl mx-auto">
+      <div id="experience" className="2xl:max-w-screen-xl lg:w-9/10 mx-auto">
         <Text variant="h2" emphasis className="mx-4">
           Experience
         </Text>

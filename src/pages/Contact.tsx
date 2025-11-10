@@ -70,7 +70,7 @@ function Contact() {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 py-16">
+    <div className="2xl:max-w-screen-xl lg:w-8/10 mx-auto py-16">
       <div className="mb-12">
         <Text variant="h1">
           Contact{" "}

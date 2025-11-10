@@ -3,7 +3,7 @@ import { Icon } from "./Icon";
 function Footer() {
   return (
     <footer className="bg-surface-elevated text-muted mt-48">
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="2xl:max-w-7xl lg:w-9/10 mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Left side - Contact grid */}
           <div className="grid grid-cols-3 gap-4">

@@ -20,7 +20,7 @@ export default function ScrollArrow() {
   return (
     <div className="min-h-[200vh]">
       <div
-        className={`fixed bottom-8 left-1/2 -translate-x-1/2 transition-opacity duration-300 ${
+        className={`fixed 2xl:bottom-8 lg:bottom-4 left-1/2 -translate-x-1/2 transition-opacity duration-300 ${
           isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >

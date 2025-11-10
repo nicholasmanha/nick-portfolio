@@ -32,7 +32,7 @@ export default function ScrollingSkills({
   }, [skills]);
 
   return (
-    <div className={cn("w-full max-w-2xl mx-auto", className)}>
+    <div className={cn("w-full max-w-2xl ml-0", className)}>
       <div 
         className="overflow-hidden w-96"
         style={{
