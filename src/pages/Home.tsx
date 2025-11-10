@@ -24,7 +24,7 @@ function Home() {
     <>
       <div className="h-screen">
         <div className="bg-surface mx-auto w-9/10 rounded-lg mb-16 border border-border overflow-hidden">
-          <div className="max-w-screen-xl mx-auto pt-16 py-12 flex relative">
+          <div className="max-w-screen-xl md:w-9/10 mx-auto pt-16 py-12 flex relative">
             <div className="w-1/2">
               <div className="mb-8">
                 <Text className="text-[40px] font-normal">Nicholas Manha</Text>
@@ -61,7 +61,7 @@ function Home() {
               <img
                 src={Profile}
                 alt={profile_compressed}
-                className="h-full w-auto ml-auto"
+                className="max-h-full w-auto ml-auto object-contain"
               />
             </div>
           </div>
