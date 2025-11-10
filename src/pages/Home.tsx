@@ -39,7 +39,16 @@ function Home() {
                   Experienced in building products from start to finish
                 </Text>
               </div>
-              <ScrollingSkills className="my-6" skills={['React', 'TypeScript', 'Next.JS', 'JavaScript', 'Python']} />
+              <ScrollingSkills
+                className="my-6"
+                skills={[
+                  "React",
+                  "TypeScript",
+                  "Next.JS",
+                  "JavaScript",
+                  "Python",
+                ]}
+              />
               <div className="flex gap-2">
                 <Button
                   onClick={() =>
@@ -61,7 +70,7 @@ function Home() {
               <img
                 src={Profile}
                 alt={profile_compressed}
-                className="max-h-full w-auto ml-auto object-contain"
+                className="max-h-full w-auto ml-auto object-contain sm:hidden lg:block"
               />
             </div>
           </div>

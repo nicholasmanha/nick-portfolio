@@ -233,7 +233,9 @@ function Contact() {
               </div>
               <div className="flex items-center gap-4">
                 <Icon size="medium" variant="ghost" icon="mail" />
-                <Text>nickrmanha@gmail.com</Text>
+                <a className="hover:opacity-70 transition-opacity" href="mailto:nickrmanha@gmail.com">
+                  <Text>nickrmanha@gmail.com</Text>
+                </a>
               </div>
 
               <div className="flex items-center gap-4">

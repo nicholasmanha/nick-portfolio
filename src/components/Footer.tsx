@@ -18,6 +18,7 @@ function Footer() {
             </a>
             <a
               href="https://stackoverflow.com/users/14644022/nicholasm"
+              target="_blank"
               className="hover:opacity-70 transition-opacity"
             >
               <div className="flex gap-2">
