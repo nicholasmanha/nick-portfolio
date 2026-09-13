@@ -17,7 +17,7 @@ function NavBar() {
   ];
 
   return (
-    <nav className="bg-surface-elevated text-foreground mx-4 lg:w-3/4 py-4 my-8 lg:mx-auto relative rounded-[32px]">
+    <nav className="bg-surface-elevated text-foreground lg:w-3/4 py-4 my-8 lg:mx-auto relative rounded-[32px]">
       <div className="max-w-screen-xl lg:w-9/10 mx-auto px-6 lg:px-0">
         <div className="flex items-center justify-between gap-8">
           <Link to="/" className="text-xl font-bold">

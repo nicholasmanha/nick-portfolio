@@ -22,12 +22,18 @@ const imageMap: Record<string, string> = {
 function Home() {
   return (
     <>
-      <div className="h-screen">
-        <div className="bg-surface mx-auto w-9/10 rounded-lg 2xl:mb-16 lg:mb-8 border border-border overflow-hidden">
-          <div className="max-w-screen-xl lg:w-9/10 mx-auto pt-16 py-12 flex relative">
-            <div className="2xl:w-1/2 lg:w-2/3">
-              <div className="mb-8">
-                <Text className="text-[40px] font-normal">Nicholas Manha</Text>
+      {/* container for screen */}
+      <div className="min-h-screen lg:h-screen">
+        {/* greeting card */}
+        <div className="bg-surface mx-4 lg:mx-auto sm:w-9/10 rounded-lg mb-8 lg:mb-8 2xl:mb-16 border border-border overflow-hidden">
+          {/* greeting card content */}
+          <div className="max-w-screen-xl w-full lg:w-9/10 mx-auto pt-10 lg:pt-16 pb-10 lg:py-12 px-6 lg:px-0 flex flex-col lg:flex-row relative">
+            <div className="w-full lg:w-2/3 2xl:w-1/2">
+              {/* title stuff */}
+              <div className="mb-8 mt-4 lg:mt-0 text-center lg:text-left">
+                <Text className="text-[24px] sm:text-[32px] lg:text-[40px] font-normal">
+                  Nicholas Manha
+                </Text>
                 <Text variant="h1">
                   {" "}
                   Software Engineer{" "}
@@ -49,7 +55,7 @@ function Home() {
                   "Python",
                 ]}
               />
-              <div className="flex gap-2">
+              <div className="justify-center lg:justify-start flex flex-wrap gap-2">
                 <Button
                   onClick={() =>
                     document
@@ -66,20 +72,24 @@ function Home() {
                 </Button>
               </div>
             </div>
-            <div className="w-1/2 absolute 2xl:right-[8%] lg:right-[0%] bottom-0 h-full flex flex-col justify-end">
+            {/* Profile image: hidden on mobile/tablet, only shown lg and up */}
+            <div className="flex w-full px-10 lg:px-0 lg:w-1/2 lg:absolute lg:right-[0%] 2xl:right-[6%] lg:bottom-0 lg:h-full flex-col justify-end order-first lg:order-none">
               <img
                 src={Profile}
                 alt={profile_compressed}
-                className="max-h-full w-auto ml-auto object-contain sm:hidden lg:block"
+                className="max-h-full w-auto ml-auto object-contain"
               />
             </div>
           </div>
         </div>
-        <div className="flex w-1/2 mx-auto px-16 gap-16 items-center">
+
+        <div className="flex w-full sm:w-4/5 lg:w-1/2 mx-auto px-4 sm:px-8 lg:px-16 gap-4 sm:gap-8 lg:gap-16 items-center">
           <div className="h-px bg-foreground w-full"></div>
-          <div className="flex flex-col items-center gap-6">
-            <Text className="whitespace-nowrap">CONNECT WITH ME</Text>
-            <div className="flex gap-6 justify-center">
+          <div className="flex flex-col items-center gap-4 sm:gap-6">
+            <Text className="whitespace-nowrap text-sm sm:text-base">
+              CONNECT WITH ME
+            </Text>
+            <div className="flex gap-4 sm:gap-6 justify-center">
               <a
                 className="flex-shrink-0"
                 target="_blank"
@@ -115,8 +125,11 @@ function Home() {
         <ScrollArrow />
       </div>
 
-      <div id="experience" className="2xl:max-w-screen-xl lg:w-9/10 mx-auto">
-        <Text variant="h2" emphasis className="mx-4">
+      <div
+        id="experience"
+        className="w-full lg:w-9/10 2xl:max-w-screen-xl mx-auto px-4 lg:px-0"
+      >
+        <Text variant="h2" emphasis className="mx-0 sm:mx-4">
           Experience
         </Text>
 
@@ -136,7 +149,7 @@ function Home() {
                 <img
                   src={imageMap[experience.image as keyof typeof imageMap]}
                   alt={`${experience.title} screenshot`}
-                  className="rounded-lg"
+                  className="rounded-lg w-full h-auto"
                   loading="lazy"
                 />
               </ProjectCard.Image>
@@ -167,7 +180,7 @@ function Home() {
           </ProjectCard>
         ))}
 
-        <Text variant="h2" emphasis className="mx-4 mt-20">
+        <Text variant="h2" emphasis className="mx-0 sm:mx-4 mt-12 lg:mt-20">
           Projects
         </Text>
 
@@ -187,7 +200,7 @@ function Home() {
                 <img
                   src={imageMap[project.image as keyof typeof imageMap]}
                   alt={`${project.title} screenshot`}
-                  className="rounded-lg"
+                  className="rounded-lg w-full h-auto"
                   loading="lazy"
                 />
               </ProjectCard.Image>
@@ -218,10 +231,10 @@ function Home() {
           </ProjectCard>
         ))}
 
-        <Text variant="h2" emphasis className="mt-20">
+        <Text variant="h2" emphasis className="mt-12 lg:mt-20">
           Skills & Frameworks
         </Text>
-        <div className="flex gap-6 my-8 items-center min-w-0 content-start flex-wrap">
+        <div className="flex gap-3 sm:gap-6 my-8 items-center min-w-0 content-start flex-wrap">
           <Icon icon="TypeScript" />
           <Icon icon="React" />
           <Icon icon="JavaScript" />
