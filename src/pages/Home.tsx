@@ -25,7 +25,7 @@ function Home() {
       {/* container for screen */}
       <div className="min-h-screen lg:h-screen">
         {/* greeting card */}
-        <div className="bg-surface mx-4 lg:mx-auto sm:w-9/10 rounded-lg mb-8 lg:mb-8 2xl:mb-16 border border-border overflow-hidden">
+        <div className="bg-surface lg:mx-auto sm:w-9/10 lg:rounded-lg mb-8 lg:mb-8 2xl:mb-16 lg:border border-border overflow-hidden">
           {/* greeting card content */}
           <div className="max-w-screen-xl w-full lg:w-9/10 mx-auto pt-10 lg:pt-16 pb-10 lg:py-12 px-6 lg:px-0 flex flex-col lg:flex-row relative">
             <div className="w-full lg:w-2/3 2xl:w-1/2">
