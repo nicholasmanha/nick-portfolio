@@ -44,20 +44,24 @@ const ProjectCard: React.FC<ProjectCardProps> & {
   // Extract Image and Description from children
   const childrenArray = React.Children.toArray(children);
   const imageComponent = childrenArray.find(
-    (child) => React.isValidElement(child) && child.type === Image
+    (child) => React.isValidElement(child) && child.type === Image,
   );
   const otherChildren = childrenArray.filter(
-    (child) => !(React.isValidElement(child) && child.type === Image)
+    (child) => !(React.isValidElement(child) && child.type === Image),
   );
 
   return (
-    <div className={cn("bg-surface rounded-card p-16 my-8", className)}>
-      <div className="flex gap-8">
+    <div
+      className={cn("bg-surface lg:rounded-card p-4 lg:p-16 my-8", className)}
+    >
+      <div className="flex flex-col lg:flex-row gap-8">
         {/* Left side - content */}
-        <div className="flex-1">
+        <div className="flex-1 order-2 lg:order-1">
           <div className="flex flex-col h-full justify-between">
             <div className="">
-              <Text variant="h3">{title}</Text>
+              <Text className="w-full" variant="h3">
+                {title}
+              </Text>
               <Text variant="p">{location}</Text>
               <Text variant="p">{date}</Text>
 
@@ -94,7 +98,10 @@ const ProjectCard: React.FC<ProjectCardProps> & {
           </div>
         </div>
 
-        {imageComponent && <div className="flex-1">{imageComponent}</div>}
+        {/* Right side - image */}
+        {imageComponent && (
+          <div className="flex-1 order-1 lg:order-2">{imageComponent}</div>
+        )}
       </div>
     </div>
   );
@@ -114,7 +121,12 @@ const Image: React.FC<ProjectCardImageProps> = ({
   className = "",
 }) => {
   return (
-    <div className={cn("w-full h-full flex justify-center items-center", className)}>
+    <div
+      className={cn(
+        "w-full h-full flex justify-center items-center",
+        className,
+      )}
+    >
       {children}
     </div>
   );

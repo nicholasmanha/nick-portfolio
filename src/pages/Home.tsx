@@ -127,9 +127,9 @@ function Home() {
 
       <div
         id="experience"
-        className="w-full lg:w-9/10 2xl:max-w-screen-xl mx-auto px-4 lg:px-0"
+        className="w-full lg:w-9/10 2xl:max-w-screen-xl mx-auto px-0"
       >
-        <Text variant="h2" emphasis className="mx-0 sm:mx-4">
+        <Text variant="h2" emphasis className="lg:mx-0 mx-4">
           Experience
         </Text>
 
