@@ -34,7 +34,7 @@ export default function ScrollingSkills({
   return (
     <div className={cn("w-full max-w-2xl ml-0", className)}>
       <div 
-        className="overflow-hidden w-96"
+        className="overflow-hidden w-9/10 mx-auto relative lg:mx-0 lg:w-96"
         style={{
           maskImage: 'linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent)',
           WebkitMaskImage: 'linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent)'

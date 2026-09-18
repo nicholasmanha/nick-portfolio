@@ -23,9 +23,9 @@ function Home() {
   return (
     <>
       {/* container for screen */}
-      <div className="min-h-screen lg:h-screen">
+      <div className="lg:h-screen">
         {/* greeting card */}
-        <div className="bg-surface lg:mx-auto sm:w-9/10 lg:rounded-lg mb-8 lg:mb-8 2xl:mb-16 lg:border border-border overflow-hidden">
+        <div className="bg-surface w-full lg:mx-auto lg:rounded-lg mb-8 lg:w-9/10 lg:mb-8 2xl:mb-16 lg:border border-border overflow-hidden">
           {/* greeting card content */}
           <div className="max-w-screen-xl w-full lg:w-9/10 mx-auto pt-10 lg:pt-16 pb-10 lg:py-12 px-6 lg:px-0 flex flex-col lg:flex-row relative">
             <div className="w-full lg:w-2/3 2xl:w-1/2">
@@ -83,7 +83,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="flex w-full sm:w-4/5 lg:w-1/2 mx-auto px-4 sm:px-8 lg:px-16 gap-4 sm:gap-8 lg:gap-16 items-center">
+        <div className="flex w-4/5 lg:w-1/2 mx-auto px-0 sm:px-8 lg:px-16 sm:gap-8 gap-8 lg:gap-16 items-center">
           <div className="h-px bg-foreground w-full"></div>
           <div className="flex flex-col items-center gap-4 sm:gap-6">
             <Text className="whitespace-nowrap text-sm sm:text-base">
