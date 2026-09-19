@@ -180,7 +180,7 @@ function Home() {
           </ProjectCard>
         ))}
 
-        <Text variant="h2" emphasis className="mx-0 sm:mx-4 mt-12 lg:mt-20">
+        <Text variant="h2" emphasis className="lg:mx-0 mx-4 mt-12 lg:mt-20">
           Projects
         </Text>
 
@@ -231,10 +231,10 @@ function Home() {
           </ProjectCard>
         ))}
 
-        <Text variant="h2" emphasis className="mt-12 lg:mt-20">
+        <Text variant="h2" emphasis className="lg:mx-0 mx-4 mt-12 lg:mt-20">
           Skills & Frameworks
         </Text>
-        <div className="flex gap-3 sm:gap-6 my-8 items-center min-w-0 content-start flex-wrap">
+        <div className="mx-4 flex gap-3 sm:gap-6 my-8 items-center min-w-0 content-start flex-wrap">
           <Icon icon="TypeScript" />
           <Icon icon="React" />
           <Icon icon="JavaScript" />
