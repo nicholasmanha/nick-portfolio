@@ -9,7 +9,7 @@ import leadviver5 from "@/assets/leadviver5.png";
 function Leadviver() {
   return (
     <>
-      <div className="2xl:max-w-screen-xl lg:w-9/10 mx-auto">
+      <div className="px-4 lg:px-0 2xl:max-w-screen-xl lg:w-9/10 mx-auto flex flex-col items-center lg:block">
         <div className="flex flex-col items-center">
           <Text variant="h1">
             <Text variant="h1" color="primary" as="span">
@@ -17,7 +17,7 @@ function Leadviver() {
             </Text>
             Software Engineer
           </Text>
-          <Text variant="h4">Terence Davis & Associates</Text>
+          <Text className="text-center" variant="h4">Terence Davis & Associates</Text>
           <Text>May 2024 - Aug 2024</Text>
           <div className="flex mt-4 gap-4">
             <Button
@@ -221,7 +221,7 @@ function Leadviver() {
             
           
         </div>
-        <HorizontalMasonryGrid
+        <HorizontalMasonryGrid className="hidden lg:block"
           images={[
             { src: leadviver2}, // Shift up
             { src: leadviver3 }, // Custom position
@@ -229,7 +229,7 @@ function Leadviver() {
             { src: leadviver5 },
           ]}
         />
-        <Button link="/">BACK TO HOME</Button>
+        <Button className="align-center" link="/">BACK TO HOME</Button>
       </div>
     </>
   );

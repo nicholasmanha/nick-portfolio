@@ -4,7 +4,7 @@ import Text from "@/components/ui/Text";
 function It() {
   return (
     <>
-      <div className="2xl:max-w-screen-xl lg:w-9/10 mx-auto">
+      <div className="px-4 lg:px-0 2xl:max-w-screen-xl lg:w-9/10 mx-auto flex flex-col items-center lg:block">
         <div className="flex flex-col items-center">
           <Text variant="h1">
             <Text variant="h1" color="primary" as="span">
@@ -12,7 +12,7 @@ function It() {
             </Text>
             Intern
           </Text>
-          <Text variant="h4">Shasta College</Text>
+          <Text className="text-center" variant="h4">Shasta College</Text>
           <Text>Aug 2023 - Dec 2023</Text>
         </div>
         <div className="mb-16">
@@ -213,7 +213,7 @@ function It() {
           </div>
         </div>
 
-        <Button link="/">BACK TO HOME</Button>
+        <Button className="align-center" link="/">BACK TO HOME</Button>
       </div>
     </>
   );

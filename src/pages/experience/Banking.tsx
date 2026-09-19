@@ -5,7 +5,7 @@ import banking_design from "@/assets/banking_design.png";
 function Banking() {
   return (
     <>
-      <div className="2xl:max-w-screen-xl lg:w-9/10 mx-auto">
+      <div className="px-4 lg:px-0 2xl:max-w-screen-xl lg:w-9/10 mx-auto flex flex-col items-center lg:block">
         <div className="flex flex-col items-center">
           <Text variant="h1">
             <Text variant="h1" color="primary" as="span">
@@ -13,7 +13,7 @@ function Banking() {
             </Text>
             Software
           </Text>
-          <Text variant="h4">Software Engineering @ CSU East Bay</Text>
+          <Text className="text-center" variant="h4">Software Engineering @ CSU East Bay</Text>
           <Text>Aug 2024 - Dec 2024</Text>
           <div className="flex mt-4 gap-4">
             <Button
@@ -243,7 +243,7 @@ function Banking() {
           
         </div>
 
-        <Button link="/">BACK TO HOME</Button>
+        <Button className="align-center" link="/">BACK TO HOME</Button>
       </div>
     </>
   );

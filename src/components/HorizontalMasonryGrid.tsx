@@ -78,7 +78,7 @@ const HorizontalMasonryGrid: React.FC<HorizontalMasonryGridProps> = ({
 
   return (
     <div className={cn("w-full h-auto overflow-auto p-8", className)}>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {images.map((img) => {
           const targetHeight = 325;
 

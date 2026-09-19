@@ -12,7 +12,7 @@ import ADLWorkFlow from "@/assets/ADLWorkflow.png";
 function Reactedm() {
   return (
     <>
-      <div className="2xl:max-w-screen-xl lg:w-9/10 mx-auto">
+      <div className="px-4 lg:px-0 2xl:max-w-screen-xl lg:w-9/10 mx-auto flex flex-col items-center lg:block">
         <div className="flex flex-col items-center">
           <Text variant="h1">
             <Text variant="h1" color="primary" as="span">
@@ -20,7 +20,9 @@ function Reactedm() {
             </Text>
             Intern
           </Text>
-          <Text variant="h4">Lawrence Berkeley National Lab</Text>
+          <Text className="text-center" variant="h4">
+            Lawrence Berkeley National Lab
+          </Text>
           <Text>May 2017 - Dec 2025</Text>
           <div className="flex mt-4 gap-4">
             <Button
@@ -77,7 +79,7 @@ function Reactedm() {
 
               <Text>
                 <div
-                  className="float-right ml-6 mb-4 max-w-xl"
+                  className="hidden lg:block float-right ml-6 mb-4 max-w-xl"
                   style={{
                     shapeOutside: `url(${AreaDetector})`,
                     shapeMargin: "0.5rem",
@@ -111,7 +113,17 @@ function Reactedm() {
                 Control System, the software that is used to controlcomplex
                 scientific instruments. <br className="mb-1" />
                 <strong>PV</strong> - Process variable, a variable that
-                corresponds to a parameter on some machine.{" "}
+                corresponds to a parameter on some machine. {/* Mobile image */}
+                <div className="lg:hidden mt-6 max-w-xl mx-auto">
+                  <img
+                    src={AreaDetector}
+                    alt="Beamline area detector"
+                    className="w-full"
+                  />
+                  <Text variant="small" className="text-center mt-2">
+                    Figure 1 - Example of a beamline w/ an area detector
+                  </Text>
+                </div>
               </Text>
             </div>
             <div className="mb-8">
@@ -262,9 +274,9 @@ function Reactedm() {
               the internship, we made a poster<sup>4</sup> that summarized our
               studies in a digestible format. This gave me experience in
               communicating complex ideas to a broader audience. In addition to
-              this, we also got to present minute long pitches in a poster
-              slam<sup>5</sup>. Despite this being a little nerve racking, I managed to
-              give a concise pitch to a crowd of people, and I even ended up
+              this, we also got to present minute long pitches in a poster slam
+              <sup>5</sup>. Despite this being a little nerve racking, I managed
+              to give a concise pitch to a crowd of people, and I even ended up
               winning the third best pitch prize<sup>6</sup>.
             </Text>
           </div>
@@ -289,12 +301,12 @@ function Reactedm() {
             </Text>
           </div>
           <div className="mb-8">
-          <img src={Poster}></img>
-          <Text variant="small" className="text-center mt-2">
-            Figure 4 - Poster for ReactEDM
-          </Text>
+            <img src={Poster}></img>
+            <Text variant="small" className="text-center mt-2">
+              Figure 4 - Poster for ReactEDM
+            </Text>
           </div>
-          <div className="bg-surface rounded-xl py-8 -mx-4 mb-16">
+          <div className="bg-surface lg:rounded-xl py-8 -mx-4 mb-16">
             <div className="flex items-center gap-16 max-w-6xl justify-center mx-auto ">
               <div className="flex-1 px-8 flex flex-col items-center">
                 <img src={Slam1}></img>
@@ -314,7 +326,9 @@ function Reactedm() {
             </div>
           </div>
         </div>
-        <Button link="/">BACK TO HOME</Button>
+        <Button className="align-center" link="/">
+          BACK TO HOME
+        </Button>
       </div>
     </>
   );
