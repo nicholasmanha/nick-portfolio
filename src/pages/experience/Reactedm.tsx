@@ -307,15 +307,15 @@ function Reactedm() {
             </Text>
           </div>
           <div className="bg-surface lg:rounded-xl py-8 -mx-4 mb-16">
-            <div className="flex items-center gap-16 max-w-6xl justify-center mx-auto ">
-              <div className="flex-1 px-8 flex flex-col items-center">
+            <div className="flex items-center lg:gap-16 max-w-6xl justify-center mx-auto ">
+              <div className="flex-1 px-4 lg:px-8 flex flex-col items-center">
                 <img src={Slam1}></img>
                 <Text variant="small" className="text-center mt-2">
                   Figure 5 - Giving a one minute pitch during the poster slam
                 </Text>
               </div>
 
-              <div className="flex-1 px-8 flex flex-col items-center">
+              <div className="flex-1 px-4 lg:px-8 flex flex-col items-center">
                 <img className="w-4/5" src={Slam4}></img>
 
                 <Text variant="small" className="text-center mt-2">

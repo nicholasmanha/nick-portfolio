@@ -169,6 +169,11 @@ function About() {
           ]}
         />
       </div>
+      <div className="w-full flex justify-center">
+        <Button className="align-center" link="/">
+          BACK TO HOME
+        </Button>
+      </div>
     </>
   );
 }

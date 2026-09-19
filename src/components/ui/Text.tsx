@@ -17,7 +17,7 @@ const TextVariants = cva("", {
       h1: "text-[32px] lg:text-[64px] font-medium lg:font-black text-foreground leading-tight",
       h2: "text-[32px] lg:text-[48px] font-bold text-foreground",
       h3: "text-[40px] font-black text-foreground",
-      h4: "text-[24px] font-medium text-foreground",
+      h4: "text-[16px] lg:text-[24px] font-medium text-foreground",
       p: "text-[16px] font-normal text-foreground",
       small: "text-[12px] text-foreground",
     },
