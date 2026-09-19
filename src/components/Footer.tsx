@@ -6,14 +6,14 @@ function Footer() {
       <div className="2xl:max-w-7xl lg:w-9/10 mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Left side - Contact grid */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-x-24 gap-y-4 lg:gap-4">
             <a
               href="mailto:nickrmanha@gmail.com"
               className="hover:opacity-70 transition-opacity"
             >
               <div className="flex gap-2">
                 <Icon icon="mail" size="small" variant="ghost"></Icon>{" "}
-                nickrmanha@gmail.com
+                <span className="hidden lg:inline">nickrmanha@gmail.com</span>
               </div>
             </a>
             <a
@@ -23,7 +23,7 @@ function Footer() {
             >
               <div className="flex gap-2">
                 <Icon icon="StackOverflow" size="small" variant="ghost"></Icon>{" "}
-                NicholasM
+                <span className="hidden lg:inline">NicholasM</span>
               </div>
             </a>
             <a
@@ -34,13 +34,13 @@ function Footer() {
             >
               <div className="flex gap-2">
                 <Icon icon="Linkedin" size="small" variant="ghost"></Icon>{" "}
-                Nicholas Manha
+                <span className="hidden lg:inline">Nicholas Manha</span>
               </div>
             </a>
 
             <div className="flex gap-2">
-              <Icon icon="phone" size="small" variant="ghost"></Icon> (530)
-              410-9658{" "}
+              <Icon icon="phone" size="small" variant="ghost"></Icon> 
+              <span className="hidden lg:inline">(530)410-9658{" "}</span>
             </div>
 
             <a
@@ -51,7 +51,7 @@ function Footer() {
             >
               <div className="flex gap-2">
                 <Icon icon="GitHub" size="small" variant="ghost"></Icon>{" "}
-                nicholasmanha{" "}
+                <span className="hidden lg:inline">nicholasmanha{" "}</span>
               </div>
             </a>
             <a
@@ -62,7 +62,7 @@ function Footer() {
             >
               <div className="flex gap-2">
                 <Icon icon="Handshake" size="small" variant="ghost"></Icon>{" "}
-                Nicholas Manha{" "}
+                <span className="hidden lg:inline">Nicholas Manha{" "}</span>
               </div>
             </a>
           </div>
