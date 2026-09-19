@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
 
 interface ImageInput {
   src: string;
@@ -16,10 +17,13 @@ interface ImageItem {
 
 interface HorizontalMasonryGridProps {
   images: (string | ImageInput)[];
+  className?: string;
 }
+
 
 const HorizontalMasonryGrid: React.FC<HorizontalMasonryGridProps> = ({
   images: imageSrcs,
+  className,
 }) => {
   const [images, setImages] = useState<ImageItem[]>([]);
 
@@ -73,7 +77,7 @@ const HorizontalMasonryGrid: React.FC<HorizontalMasonryGridProps> = ({
   };
 
   return (
-    <div className="w-full h-auto overflow-auto p-8">
+    <div className={cn("w-full h-auto overflow-auto p-8", className)}>
       <div className="grid grid-cols-2 gap-8">
         {images.map((img) => {
           const targetHeight = 325;
