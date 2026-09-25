@@ -10,6 +10,7 @@ import It from "./pages/experience/It.tsx";
 import Tutor from "./pages/experience/Tutor.tsx";
 import Assist from "./pages/experience/Assist.tsx";
 import Banking from "./pages/experience/Banking.tsx";
+import Server from "./pages/experience/Server.tsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="tutor" element={<Tutor />} />
         <Route path="assist" element={<Assist />} />
         <Route path="banking" element={<Banking />} />
+        <Route path="server" element={<Server />} />
       </Route>
     </Routes>
   );
