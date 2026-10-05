@@ -1,13 +1,11 @@
 import { Button } from "@/components/ui/button";
 import Text from "@/components/ui/Text";
 import server1 from "@/assets/server1.png";
-import ReactEDM from "@/assets/ReactEDM.png";
-import Poster from "@/assets/NickMPosterFinal.png";
-import Slam1 from "@/assets/slam-1.png";
-import Slam4 from "@/assets/slam-4.png";
-import AreaDetector from "@/assets/beamline.png";
-import ADL from "@/assets/ADL.png";
-import ADLWorkFlow from "@/assets/ADLWorkflow.png";
+import ThinkStation from "@/assets/thinkstation.png"
+import Fire from "@/assets/fire.png"
+import DellTower from "@/assets/DellTower.png"
+import Chenbro from "@/assets/chenbro.jpg"
+
 
 function Reactedm() {
   return (
@@ -52,6 +50,90 @@ function Reactedm() {
           </div>
 
           <Text variant="h2" emphasis className="mb-4">
+            Hardware Checklist
+          </Text>
+          <div className="mb-8">
+            <Text>
+              Every Server needs its hardware! Here is what I needed for my applications.
+            </Text>
+            <ul className="mt-4 list-disc pl-6">
+              <li>
+                <Text className="inline" variant="h4">
+                  Compute Node
+                </Text>{" "}
+                <Text className="inline" variant="small">
+                  Hosts the hypervisor
+                </Text>
+              </li>
+              <li>
+                <Text className="inline" variant="h4">
+                  NAS Node
+                </Text>{" "}
+                <Text className="inline" variant="small">
+                  Hosts the NAS OS
+                </Text>
+              </li>
+              <li>
+                <Text className="inline" variant="h4">
+                  Hot Swappable Cage
+                </Text>{" "}
+                <Text className="inline" variant="small">
+                  For the storage
+                </Text>
+              </li>
+              <li>
+                <Text className="inline" variant="h4">
+                  HBA Card
+                </Text>{" "}
+                <Text className="inline" variant="small">
+                  To interface with the NAS cage
+                </Text>
+              </li>
+              <li>
+                <Text className="inline" variant="h4">
+                  Raspberry Pi
+                </Text>{" "}
+                <Text className="inline" variant="small">
+                  For Pi-hole
+                </Text>
+              </li>
+            </ul>
+          </div>
+          <Text variant="h3" className="inline">
+            Compute Node <Text className="inline" >| Thinkstation P320 Tiny</Text>
+          </Text>
+          <Text>
+            The compute node was actually the first piece of hardware I purcahsed for this project, 3 months before I finished. I should also mention that many of these components were purchased on Facebook Marketplace and eBay, so I often didn't have much choice in the particular models. With that being said, I went with the <a target="_blank" href="https://www.lenovo.com/us/en/p/workstations/thinkstation-p-tiny/thinkstation-p320-tiny/33ts3tp320t"><Text className="inline" color="primary">ThinkStation P320 Tiny </Text></a>for my compute node. I got it for $140, and I picked it up in a middle school parking lot. There was a fire across the street as well, so the air smelled like smoke. It was a very odd environment for a facebook marketplace deal.
+
+          </Text>
+          <img src={ThinkStation}></img>
+          <img src={Fire}></img>
+
+          <Text variant="h3" className="inline">
+            NAS Node <Text className="inline" >| Dell Optiplex 5050 Mini Tower</Text>
+          </Text>
+          <Text>
+            For this part of the hardware, I didn't really have any requirements. For my purposes, the NAS node didn't need to be particularly beefy, it just needed to be a computer, and work. For this, I went with the cheapest option on Facebook marketplace that had a reasonable amount of DDR4 RAM, and went on my mary way. The model I bought was the <a target="_blank" href="https://www.dell.com/support/manuals/en-us/optiplex-5050-micro/optiplex-5050-desktop-micro-owners-manual/product-specifications
+"><Text className="inline" color="primary">Dell Optiplex 5050 Mini Tower</Text></a>. I actually end up regretting this, as this computer is a pain to modify due to its non-modular power supply, and its quite large, making it difficult to fit with standard server racks. <br></br>
+            This deal was done at night in a sketchy parking lot. Thankfully, the seller was very nice and didn't try to kill me.
+          </Text>
+          <img src={DellTower}></img>
+
+          <Text variant="h3" className="inline">
+            Hot Swappable Cage
+          </Text>
+          <Text>
+            A hot swappable NAS allows you to swap out hard drives without turning off the NAS. It makes it very easy to add or remove storage, In this case, a NAS "cage" is just a hot-swappable bay that fits into a tower. This was the second item I bought for my server buikd, and I honestly just wanted one because they look really cool. I found the cheapest one I could find on eBay, which was this  <a target="_blank" href="https://www.ebay.com/itm/324907509905
+"><Text className="inline" color="primary">Chenbro</Text></a> one, and I was off. <br></br>
+
+            This hasty decision bit me in a couple of ways. For one, the backplane of this NAS uses SFF-8087, which is a type of SAS port. This isn't necessarily a bad thing, as this connector is pretty common, but it was definitely more overhead than I thought would be necessary. This also meant that I would need an HBA card, which I didn't even know existed before starting this project. <br></br>
+            Another reason why this purchase wasn't the best was the fact that this NAS cage was meant to fit into a tower. At the time, I thought this was meant to fit on a server rack, however it was immediately obvious that this wasn't the case when it arrived. This is actually meant to go inside a standard NAS desktop, which made it awkward to fit with other components. <br></br>
+            Lastly, this cage uses 2.5in drives instead of the more common 3.5in. I guess this makes it easy to salvage old laptops, but I definitely would have preferred to use 3.5in drives, as I have more of these. 
+          </Text>
+          <img className="w-[300px]" src={Chenbro}></img>
+
+
+          <Text variant="h2" emphasis className="mb-4">
             Goals & Expectations
           </Text>
           <div className="mb-8">
@@ -62,7 +144,7 @@ function Reactedm() {
             </Text>
             <ul className="mt-4 list-disc pl-6">
               <li>
-                <Text className="inline" variant="h3">
+                <Text className="inline" variant="h4">
                   Hypervisor
                 </Text>{" "}
                 <Text className="inline" variant="small">
@@ -70,7 +152,7 @@ function Reactedm() {
                 </Text>
               </li>
               <li>
-                <Text className="inline" variant="h3">
+                <Text className="inline" variant="h4">
                   Media Server
                 </Text>{" "}
                 <Text className="inline" variant="small">
@@ -78,7 +160,7 @@ function Reactedm() {
                 </Text>
               </li>
               <li>
-                <Text className="inline" variant="h3">
+                <Text className="inline" variant="h4">
                   Pi-hole
                 </Text>{" "}
                 <Text className="inline" variant="small">
@@ -86,7 +168,7 @@ function Reactedm() {
                 </Text>
               </li>
               <li>
-                <Text className="inline" variant="h3">
+                <Text className="inline" variant="h4">
                   Ignition
                 </Text>{" "}
                 <Text className="inline" variant="small">
@@ -137,9 +219,9 @@ function Reactedm() {
               project.
             </Text>
           </div>
-          
-          
-          
+
+
+
         </div>
         <Button className="align-center" link="/">
           BACK TO HOME
