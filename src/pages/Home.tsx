@@ -12,6 +12,7 @@ import projectsData from "@/assets/projects.json";
 import Profile from "@/assets/profile_adjustment.webp";
 import profile_compressed from "@/assets/profile_adjustment_compressed.webp";
 import ScrollingSkills from "@/components/ScrollingSkills";
+import { Link } from "react-router-dom";
 
 const imageMap: Record<string, string> = {
   ReactEDM: ReactEDM,
@@ -41,9 +42,7 @@ function Home() {
                     & Web Developer
                   </Text>
                 </Text>
-                <Text variant="p">
-                  Experienced in building products from start to finish
-                </Text>
+                <Text variant="p">And most recently, a Support Engineer!</Text>
               </div>
               <ScrollingSkills
                 className="my-6"
@@ -184,6 +183,22 @@ function Home() {
           Projects
         </Text>
 
+        <a href="/#/server">
+          <div className="bg-surface lg:rounded-card p-4 lg:px-16 my-8 w-1/2">
+            <div className="flex justify-between items-center">
+              <Text variant="h3">Server/Homelab</Text>
+              <Text>Read More →</Text>
+            </div>
+          </div>
+        </a>
+        <a href="/#/server">
+          <div className="bg-surface lg:rounded-card p-4 lg:px-16 my-8 w-1/2">
+            <div className="flex justify-between items-center">
+              <Text variant="h3">PLC</Text>
+              <Text>Read More →</Text>
+            </div>
+          </div>
+        </a>
         {projectsData.map((project, index) => (
           <ProjectCard
             key={index}
