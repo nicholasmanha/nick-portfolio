@@ -498,9 +498,10 @@ function Reactedm() {
             </Text>
             <img className="lg:w-1/2" src={fish_tank}></img>
           </div>
+          <Text>And that's my homelab! Thanks for reading.<br></br> <br></br></Text>
         </div>
-        <Text>And that's my homelab! Thanks for reading.</Text>
-        <br></br> <br></br>
+        
+        
         <Button className="align-center" link="/">
           BACK TO HOME
         </Button>
