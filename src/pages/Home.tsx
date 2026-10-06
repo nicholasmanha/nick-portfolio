@@ -12,7 +12,6 @@ import projectsData from "@/assets/projects.json";
 import Profile from "@/assets/profile_adjustment.webp";
 import profile_compressed from "@/assets/profile_adjustment_compressed.webp";
 import ScrollingSkills from "@/components/ScrollingSkills";
-import { Link } from "react-router-dom";
 
 const imageMap: Record<string, string> = {
   ReactEDM: ReactEDM,
@@ -42,7 +41,7 @@ function Home() {
                     & Web Developer
                   </Text>
                 </Text>
-                <Text variant="p">And most recently, a Support Engineer!</Text>
+                <Text variant="p">And most recently, a Support Engineer at Inductive Automation!</Text>
               </div>
               <ScrollingSkills
                 className="my-6"
