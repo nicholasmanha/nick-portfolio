@@ -39,13 +39,15 @@ function Reactedm() {
               etc.), is isolated from the voltages of the device it's
               controlling, and can easily communicate with sensors and a control
               system. Although not required, something that is also paired with
-              PLC's is the use of ladder logic for programming. Ladder logic is a
-              graphical language that is built to resemble relay logic, which is
-              how industrial automation was done a long time ago. In this
+              PLC's is the use of ladder logic for programming. Ladder logic is
+              a graphical language that is built to resemble relay logic, which
+              is how industrial automation was done a long time ago. In this
               project however, I end up using regular code to program my PLC.
             </Text>
             <img className="lg:w-1/4" src={ladder_logic}></img>
-            <Text><br></br></Text>
+            <Text>
+              <br></br>
+            </Text>
             <Text>Example of a compact PLC:</Text>
             <img className="lg:w-1/4" src={plc_example}></img>
           </div>
@@ -69,16 +71,15 @@ function Reactedm() {
               </Text>
               <Text>
                 When I first learned about PLC's, I thought to myself "how hard
-                would it be to make one?" It actually isn't too
-                difficult to make a basic one. I didn't really have an
-                application for this yet, but I knew that I wanted to do
-                something with my fish tank. Something I've always been
-                concerned with is if I forget to turn on my tank's heater and
-                turning it off for cleaning, so my PLC can help measure the
-                temperature and let me know if it's too cold/hot. With this, I
-                found a tutorial that contained a schematic of a simple PLC
-                design, and I was off. Here is an outline of the steps I took to
-                create mine.
+                would it be to make one?" It actually isn't too difficult to
+                make a basic one. I didn't really have an application for this
+                yet, but I knew that I wanted to do something with my fish tank.
+                Something I've always been concerned with is if I forget to turn
+                on my tank's heater and turning it off for cleaning, so my PLC
+                can help measure the temperature and let me know if it's too
+                cold/hot. With this, I found a tutorial that contained a
+                schematic of a simple PLC design, and I was off. Here is an
+                outline of the steps I took to create mine.
               </Text>
             </div>
             <div className="mb-8">
@@ -172,11 +173,11 @@ function Reactedm() {
             </Text>
             <Text>
               Like I said, I wanted to use this for my fish tank, so I dropped
-              the temperature probe (they were very curious with what this was) into
-              the fish tank. I set up the ESP32 to connect to my home network on
-              an IOT SSID, and had it communicate its temperature reading via
-              Modbus over TCP. From there, I connected the device to my local
-              Ignition Server (read more about this{" "}
+              the temperature probe (they were very curious with what this was)
+              into the fish tank. I set up the ESP32 to connect to my home
+              network on an IOT SSID, and had it communicate its temperature
+              reading via Modbus over TCP. From there, I connected the device to
+              my local Ignition Server (read more about this{" "}
               <a target="_blank" href="/#/server">
                 <Text className="inline" color="primary">
                   here
@@ -188,7 +189,9 @@ function Reactedm() {
               too hot or cold.
             </Text>
             <img className="lg:w-1/2" src={fish_tank}></img>
-            <Text><br></br>And that's my PLC! Thanks for reading.</Text>
+            <Text>
+              <br></br>And that's my PLC! Thanks for reading.
+            </Text>
           </div>
         </div>
         <Button className="align-center" link="/">

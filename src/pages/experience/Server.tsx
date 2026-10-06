@@ -55,205 +55,222 @@ function Reactedm() {
             </Text>
           </div>
 
-          <Text variant="h2" emphasis className="mb-4">
-            Hardware Checklist
-          </Text>
-          <div className="mb-8">
-            <Text>
-              Every Server needs its hardware! Here is what I needed for my
-              applications.
+          <div className="mb-16">
+            <Text variant="h2" emphasis className="mb-4">
+              Hardware Checklist
             </Text>
-            <ul className="mt-4 list-disc pl-6">
-              <li>
-                <Text className="inline" variant="h4">
-                  Compute Node
-                </Text>{" "}
-                <Text className="inline" variant="small">
-                  Hosts the hypervisor
-                </Text>
-              </li>
-              <li>
-                <Text className="inline" variant="h4">
-                  NAS Node
-                </Text>{" "}
-                <Text className="inline" variant="small">
-                  Hosts the NAS OS
-                </Text>
-              </li>
-              <li>
-                <Text className="inline" variant="h4">
-                  Hot Swappable Cage
-                </Text>{" "}
-                <Text className="inline" variant="small">
-                  For the storage
-                </Text>
-              </li>
-              <li>
-                <Text className="inline" variant="h4">
-                  HBA Card
-                </Text>{" "}
-                <Text className="inline" variant="small">
-                  To interface with the NAS cage
-                </Text>
-              </li>
-              <li>
-                <Text className="inline" variant="h4">
-                  Raspberry Pi
-                </Text>{" "}
-                <Text className="inline" variant="small">
-                  For Pi-hole
-                </Text>
-              </li>
-            </ul>
+            <div className="mb-8">
+              <Text>
+                Every Server needs its hardware! Here is what I needed for my
+                applications.
+              </Text>
+              <ul className="mt-4 list-disc pl-6">
+                <li>
+                  <Text className="inline" variant="h4">
+                    Compute Node
+                  </Text>{" "}
+                  <Text className="inline" variant="small">
+                    Hosts the hypervisor
+                  </Text>
+                </li>
+                <li>
+                  <Text className="inline" variant="h4">
+                    NAS Node
+                  </Text>{" "}
+                  <Text className="inline" variant="small">
+                    Hosts the NAS OS
+                  </Text>
+                </li>
+                <li>
+                  <Text className="inline" variant="h4">
+                    Hot Swappable Cage
+                  </Text>{" "}
+                  <Text className="inline" variant="small">
+                    Houses the storage
+                  </Text>
+                </li>
+                <li>
+                  <Text className="inline" variant="h4">
+                    HBA Card
+                  </Text>{" "}
+                  <Text className="inline" variant="small">
+                    To interface with the NAS cage
+                  </Text>
+                </li>
+                <li>
+                  <Text className="inline" variant="h4">
+                    Raspberry Pi
+                  </Text>{" "}
+                  <Text className="inline" variant="small">
+                    For Pi-hole
+                  </Text>
+                </li>
+              </ul>
+            </div>
+            <div className="mb-8">
+              <Text variant="h3" className="mb-1">
+                Compute Node{" "}
+                <Text className="inline">| Thinkstation P320 Tiny</Text>
+              </Text>
+              <Text>
+                The compute node was actually the first piece of hardware I
+                purchased for this project, 3 months before I finished. I should
+                also mention that many of these components were purchased on
+                Facebook Marketplace and eBay, so I often didn't have much
+                choice in the particular models. With that being said, I went
+                with the{" "}
+                <a
+                  target="_blank"
+                  href="https://www.lenovo.com/us/en/p/workstations/thinkstation-p-tiny/thinkstation-p320-tiny/33ts3tp320t"
+                >
+                  <Text className="inline" color="primary">
+                    ThinkStation P320 Tiny{" "}
+                  </Text>
+                </a>
+                for my compute node. I got it for $140, and I picked it up in a
+                middle school parking lot. There was a fire across the street as
+                well, so the air smelled like smoke. It was a very odd
+                environment for a facebook marketplace deal.
+              </Text>
+              <img className="lg:w-1/2" src={ThinkStation}></img>
+              <img className="lg:w-1/4" src={Fire}></img>
+            </div>
+            <div className="mb-8">
+              <Text variant="h3" className="mb-1">
+                NAS Node{" "}
+                <Text className="inline">| Dell Optiplex 5050 Mini Tower</Text>
+              </Text>
+              <Text>
+                For this part of the hardware, I didn't really have any
+                requirements. For my purposes, the NAS node didn't need to be
+                particularly beefy, it just needed to be a computer, and work
+                properly. For this, I went with the cheapest option on Facebook
+                marketplace that had a reasonable amount of DDR4 RAM, and went
+                on my mary way. The model I bought was the{" "}
+                <a
+                  target="_blank"
+                  href="https://www.dell.com/support/manuals/en-us/optiplex-5050-micro/optiplex-5050-desktop-micro-owners-manual/product-specifications"
+                >
+                  <Text className="inline" color="primary">
+                    Dell Optiplex 5050 Mini Tower
+                  </Text>
+                </a>
+                . I actually end up regretting this, as this computer is a pain
+                to modify due to its non-modular power supply, and it's quite
+                large, making it difficult to fit with standard server racks.{" "}
+                <br></br>
+                <br></br>
+                This deal was done at night in a sketchy parking lot.
+                Thankfully, the seller was very nice and didn't try to kill me.
+              </Text>
+              <img className="lg:w-1/4" src={DellTower}></img>
+            </div>
+            <div className="mb-8">
+              <Text variant="h3" className="mb-1">
+                Hot Swappable Cage
+              </Text>
+              <Text>
+                A hot swappable NAS allows you to swap out hard drives without
+                turning off the NAS, making it very easy to add or remove
+                storage. In this case, a NAS "cage" is just a hot-swappable bay
+                that fits into a tower. This was the second item I bought for my
+                server build, and I honestly just wanted one because they look
+                really cool. I found the cheapest one I could find on eBay,
+                which was this{" "}
+                <a target="_blank" href="https://www.ebay.com/itm/324907509905">
+                  <Text className="inline" color="primary">
+                    Chenbro
+                  </Text>
+                </a>{" "}
+                one, and I was off. <br></br>
+                This hasty decision bit me in a couple of ways. For one, the
+                backplane of this NAS uses SFF-8087, which is a type of SAS
+                port. This isn't necessarily a bad thing, as this connector is
+                pretty common, but it was definitely more overhead than I
+                thought would be necessary. This also meant that I would need an
+                HBA card, which I didn't even know existed before starting this
+                project. <br></br>
+                Another reason why this purchase wasn't the best was the fact
+                that this NAS cage was meant to fit into a tower. At the time, I
+                thought this was meant to fit on a server rack, however it was
+                immediately obvious that this wasn't the case when it arrived.
+                This is actually meant to go inside a standard NAS desktop,
+                which made it awkward to fit with other components. <br></br>
+                Lastly, this cage uses 2.5in drives instead of the more common
+                3.5in. I guess this makes it easy to salvage old laptops, but I
+                definitely would have preferred to use 3.5in drives, as I have
+                more of these.
+              </Text>
+              <img className="lg:w-1/3" src={Chenbro}></img>
+            </div>
+            <div className="mb-8">
+              <Text variant="h3" className="mb-1">
+                HBA Card <Text className="inline">| LSI 9200-8E</Text>
+              </Text>
+              <Text>
+                I learned that I needed one of these after purchasing my NAS
+                cage. This allows you to read from multiple drives with one
+                cable, and plugs in via PCIe slot. I originally had the LSI
+                SAS9200-8E, however I was having issues with this device not
+                booting correctly every so often. So far, my newest card has
+                been doing great, and it transfers data at 6Gb/s, which is
+                plenty for my applications. It's also been tested with TrueNAS,
+                so that's good enough for me.
+              </Text>
+              <img className="lg:w-1/2" src={HBA_card}></img>
+            </div>
+            <div className="mb-8">
+              <Text variant="h3" className="mb-1">
+                Raspberry Pi <Text className="inline">| Pi 3 Model B</Text>
+              </Text>
+              <Text>
+                Not much to say here, I got this model for Christmas and it's
+                plenty for Pi-hole.
+              </Text>
+              <img className="lg:w-1/2" src={RaspberryPi}></img>
+            </div>
           </div>
-          <Text variant="h3" className="inline">
-            Compute Node{" "}
-            <Text className="inline">| Thinkstation P320 Tiny</Text>
-          </Text>
-          <Text>
-            The compute node was actually the first piece of hardware I
-            purcahsed for this project, 3 months before I finished. I should
-            also mention that many of these components were purchased on
-            Facebook Marketplace and eBay, so I often didn't have much choice in
-            the particular models. With that being said, I went with the{" "}
-            <a
-              target="_blank"
-              href="https://www.lenovo.com/us/en/p/workstations/thinkstation-p-tiny/thinkstation-p320-tiny/33ts3tp320t"
-            >
-              <Text className="inline" color="primary">
-                ThinkStation P320 Tiny{" "}
-              </Text>
-            </a>
-            for my compute node. I got it for $140, and I picked it up in a
-            middle school parking lot. There was a fire across the street as
-            well, so the air smelled like smoke. It was a very odd environment
-            for a facebook marketplace deal.
-          </Text>
-          <img src={ThinkStation}></img>
-          <img src={Fire}></img>
-
-          <Text variant="h3" className="inline">
-            NAS Node{" "}
-            <Text className="inline">| Dell Optiplex 5050 Mini Tower</Text>
-          </Text>
-          <Text>
-            For this part of the hardware, I didn't really have any
-            requirements. For my purposes, the NAS node didn't need to be
-            particularly beefy, it just needed to be a computer, and work. For
-            this, I went with the cheapest option on Facebook marketplace that
-            had a reasonable amount of DDR4 RAM, and went on my mary way. The
-            model I bought was the{" "}
-            <a
-              target="_blank"
-              href="https://www.dell.com/support/manuals/en-us/optiplex-5050-micro/optiplex-5050-desktop-micro-owners-manual/product-specifications
-"
-            >
-              <Text className="inline" color="primary">
-                Dell Optiplex 5050 Mini Tower
-              </Text>
-            </a>
-            . I actually end up regretting this, as this computer is a pain to
-            modify due to its non-modular power supply, and its quite large,
-            making it difficult to fit with standard server racks. <br></br>
-            This deal was done at night in a sketchy parking lot. Thankfully,
-            the seller was very nice and didn't try to kill me.
-          </Text>
-          <img src={DellTower}></img>
-
-          <Text variant="h3" className="inline">
-            Hot Swappable Cage
-          </Text>
-          <Text>
-            A hot swappable NAS allows you to swap out hard drives without
-            turning off the NAS. It makes it very easy to add or remove storage,
-            In this case, a NAS "cage" is just a hot-swappable bay that fits
-            into a tower. This was the second item I bought for my server buikd,
-            and I honestly just wanted one because they look really cool. I
-            found the cheapest one I could find on eBay, which was this{" "}
-            <a
-              target="_blank"
-              href="https://www.ebay.com/itm/324907509905
-"
-            >
-              <Text className="inline" color="primary">
-                Chenbro
-              </Text>
-            </a>{" "}
-            one, and I was off. <br></br>
-            This hasty decision bit me in a couple of ways. For one, the
-            backplane of this NAS uses SFF-8087, which is a type of SAS port.
-            This isn't necessarily a bad thing, as this connector is pretty
-            common, but it was definitely more overhead than I thought would be
-            necessary. This also meant that I would need an HBA card, which I
-            didn't even know existed before starting this project. <br></br>
-            Another reason why this purchase wasn't the best was the fact that
-            this NAS cage was meant to fit into a tower. At the time, I thought
-            this was meant to fit on a server rack, however it was immediately
-            obvious that this wasn't the case when it arrived. This is actually
-            meant to go inside a standard NAS desktop, which made it awkward to
-            fit with other components. <br></br>
-            Lastly, this cage uses 2.5in drives instead of the more common
-            3.5in. I guess this makes it easy to salvage old laptops, but I
-            definitely would have preferred to use 3.5in drives, as I have more
-            of these.
-          </Text>
-          <img className="w-[300px]" src={Chenbro}></img>
-
-          <Text variant="h3" className="inline">
-            HBA Card <Text className="inline">| LSI 9200-8E</Text>
-          </Text>
-          <Text>
-            I learned that I needed one of these after purchasing my NAS cage.
-            This allows you to read from multiple drives with one cable, and
-            plugs in via PCIe slot. I originally had the LSI SAS9200-8E, however
-            I was having issues with this device not booting correctly every so
-            often. So far, my newest card has been doing great, and it transfers
-            data at 6Gb/s, which is plenty for my applications. It's also been
-            tested with TrueNAS, so that's good enough for me.
-          </Text>
-          <img className="w-[300px]" src={HBA_card}></img>
-
-          <Text variant="h3" className="inline">
-            Raspberry Pi <Text className="inline">| Pi 3 Model B</Text>
-          </Text>
-          <Text>
-            Not much to say here, I got this model for Christmas and it's plenty
-            for Pi-hole.
-          </Text>
-          <img className="w-[300px]" src={RaspberryPi}></img>
-
-          <Text variant="h2" emphasis className="mb-4">
-            The Build Process
-          </Text>
-          <Text>
-            During my research for this project, I knew that I would need some
-            sort of custom setup due to the wacky dimensions of my components.
-            In hindsight, I definitely went a little too custom, and this caused
-            a lot of headache. Idealy, what I should have done was buy
-            already-built Server racks that adhere to the EIA-310 specification,
-            but I unfortunately did not do this. Instead, I took a trip to my
-            local home depot, and bought slotted Zinc bars... which is for
-            furniture... <br></br>
-            <img className="w-[300px]" src={slotted_bar}></img>
-            As you can imagine, this was a major pain, because I had to create a
-            custom fitting for virtually all of my parts. I did have a couple of
-            reasons for doing this though:
-            <ul>
-              <li>- To save Money</li>
-              <li>
-                - I had a tower that would not fit in a standard server rack
-              </li>
-              <li>- I wanted an excuse to use my 3D printer</li>
-            </ul>
-            With this, I went ahead and began designing several brackets and
-            adapters for my components. Here are a few:
-            <img className="w-[300px]" src={models}></img>
-            After several days of tinkering, a powersupply, fans, and random
-            cables later, I finished constructing my server. Here it is next to
-            a Cinemark Extra Large popcorn box for size.
-            <img className="w-[300px]" src={server2}></img>
-          </Text>
-
+          <div className="mb-16">
+            <Text variant="h2" emphasis className="mb-4">
+              The Build Process
+            </Text>
+            <Text>
+              During my research for this project, I knew that I would need some
+              sort of custom setup due to the wacky dimensions of my components.
+              In hindsight, I definitely went a little too custom, and this
+              caused a lot of headache. Ideally, what I should have done was buy
+              already-built Server racks that adhere to the EIA-310
+              specification, but I unfortunately did not do this. Instead, I
+              took a trip to my local home depot, and bought slotted Zinc
+              bars... which is for furniture... <br></br>
+              <img className="lg:w-1/3" src={slotted_bar}></img> <br></br>
+              As you can imagine, this was a major pain, because I had to create
+              a custom fitting for virtually all of my parts. I did have a
+              couple of reasons for doing this though:
+              <ul className="list-disc pl-5">
+                <li>
+                  <Text>To save Money</Text>
+                </li>
+                <li>
+                  <Text>
+                    I had a tower that would not fit in a standard server rack
+                  </Text>
+                </li>
+                <li>
+                  <Text>I wanted an excuse to use my 3D printer</Text>
+                </li>
+              </ul>
+              <br></br>
+              With this, I went ahead and began designing several brackets and
+              adapters for my components. Here are a few:
+              <img className="lg:w-1/2" src={models}></img>
+              <br></br>
+              After several days of tinkering, a powersupply, fans, and random
+              cables later, I finished constructing my server. Here it is next
+              to a Cinemark Extra Large popcorn bucket for size.
+              <img className="lg:w-1/2" src={server2}></img>
+            </Text>
+          </div>
           <Text variant="h2" emphasis className="mb-4">
             Apps & Software
           </Text>
@@ -319,7 +336,7 @@ function Reactedm() {
               using. <br></br> <br></br>
               What I decided to go with was Proxmox. I went with this for
               several reasons, namely the fact that it's open source and has a
-              lot of support. I often head towards softwares with a big
+              lot of support. I often lean towards softwares with a big
               community over anything else, as this gives longevity in the
               product. Plus, I am a sucker for web UI's, which proxmox is based
               off of. In all honesty, however, I was recommended this by a
@@ -327,11 +344,18 @@ function Reactedm() {
               this hypervisor. So far, I have been loving how easy it is to
               provision things, and monitor my containers/VMs.
             </Text>
+            <br></br>
             <Text>Some tutorials I used:</Text>
-            <a href="https://www.youtube.com/watch?v=lFzWDJcRsqo">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=lFzWDJcRsqo"
+            >
               <Text color="primary">Beginners Guide to Proxmox</Text>
             </a>
-            <a href="https://www.youtube.com/watch?v=h8qEXBp--WU">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=h8qEXBp--WU"
+            >
               <Text color="primary">Creating Containers in Proxmox</Text>
             </a>
           </div>
@@ -344,13 +368,20 @@ function Reactedm() {
               any rhyme or reason to use this particular OS other than the
               support it has from its community.
             </Text>
+            <br></br>
             <Text>Some tutorials I used:</Text>
-            <a href="https://www.youtube.com/watch?v=BbXtAuWEx2w">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=BbXtAuWEx2w"
+            >
               <Text color="primary">
                 Creating a bootable drive of TrueNAS with Rufus
               </Text>
             </a>
-            <a href="https://www.youtube.com/watch?v=67KtKoW4IM0">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=67KtKoW4IM0"
+            >
               <Text color="primary">TrueNAS setup guide</Text>
             </a>
           </div>
@@ -368,8 +399,12 @@ function Reactedm() {
               is something that will always be open source and free. As long as
               I own my software, I am happy. Also, Jellyfish are pretty cool.
             </Text>
+            <br></br>
             <Text>Some tutorials I used:</Text>
-            <a href="https://www.youtube.com/watch?v=uu9PvIBYrWk">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=uu9PvIBYrWk"
+            >
               <Text color="primary">Jellyfin Setup for Proxmox</Text>{" "}
               <Text>
                 This tutorial also covers how to connect your NAS to host your
@@ -383,10 +418,10 @@ function Reactedm() {
               Pi-hole
             </Text>
             <Text>
-              Pi-hole is a common stable in many homelabs. This is a software
-              that runs on raspberry pi's that turns it into a DNS proxy.
-              Basically, whenever a request for a site comes in, it will first
-              reach my raspberry pi. This pi has several{" "}
+              Pi-hole is a staple in many homelabs. This is a software that runs
+              on a raspberry pi that acts as a DNS proxy. Basically, whenever a
+              request for a site comes in, it will first reach my raspberry pi.
+              This pi has several{" "}
               <a
                 target="_blank"
                 href="https://www.reddit.com/r/pihole/comments/1qfu3o8/updated_blocklist_advice_for_2026/
@@ -410,12 +445,22 @@ function Reactedm() {
               questions, including what DNS server to use. Your router responds
               with a DHCP packet, which we can change what DNS server it will
               respond with in this packet. Simply use the IP for your raspberry
-              pi, and bobs your uncle.
+              pi, and bob's your uncle.
             </Text>
-            <img src={pihole}></img>
+            <img className="lg:w-1/2" src={pihole}></img>
+            <br></br>
 
+            <Text>
+              The unfortunate part about all of this is that it works at the
+              network level. This means that if a site serves its ads on its own
+              domain (Youtube, Netflix, etc.), it cannot block it. <br></br>{" "}
+              <br></br>
+            </Text>
             <Text>Some tutorials I used:</Text>
-            <a href="https://www.youtube.com/watch?v=cE21YjuaB6o">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=cE21YjuaB6o"
+            >
               <Text color="primary">Pi-hole tutorial</Text>
             </a>
           </div>
@@ -437,7 +482,7 @@ function Reactedm() {
               , it's a SCADA platform that allows you to talk to several PLC's
               and do cool things with their data. In this case, I had a PLC that
               I made (read more about that{" "}
-              <a target="_blank" href="/PLC">
+              <a target="_blank" href="/#/PLC">
                 <Text className="inline" color="primary">
                   here
                 </Text>
@@ -451,9 +496,11 @@ function Reactedm() {
               history on a Perspective project. It even uses my email account to
               notify me if the temperature gets too high or low.
             </Text>
-            <img src={fish_tank}></img>
+            <img className="lg:w-1/2" src={fish_tank}></img>
           </div>
         </div>
+        <Text>And that's my homelab! Thanks for reading.</Text>
+        <br></br> <br></br>
         <Button className="align-center" link="/">
           BACK TO HOME
         </Button>
