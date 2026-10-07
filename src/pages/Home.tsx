@@ -183,7 +183,7 @@ function Home() {
         </Text>
 
         <a href="/#/server">
-          <div className="bg-surface lg:rounded-card p-4 lg:px-16 my-8 w-1/2">
+          <div className="bg-surface lg:rounded-card p-4 lg:px-16 my-8 lg:w-1/2">
             <div className="flex justify-between items-center">
               <Text variant="h3">Server/Homelab</Text>
               <Text>Read More →</Text>
@@ -191,7 +191,7 @@ function Home() {
           </div>
         </a>
         <a href="/#/server">
-          <div className="bg-surface lg:rounded-card p-4 lg:px-16 my-8 w-1/2">
+          <div className="bg-surface lg:rounded-card p-4 lg:px-16 my-8 lg:w-1/2">
             <div className="flex justify-between items-center">
               <Text variant="h3">PLC</Text>
               <Text>Read More →</Text>
