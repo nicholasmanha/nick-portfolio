@@ -190,7 +190,7 @@ function Home() {
             </div>
           </div>
         </a>
-        <a href="/#/server">
+        <a href="/#/plc">
           <div className="bg-surface lg:rounded-card p-4 lg:px-16 my-8 lg:w-1/2">
             <div className="flex justify-between items-center">
               <Text variant="h3">PLC</Text>
